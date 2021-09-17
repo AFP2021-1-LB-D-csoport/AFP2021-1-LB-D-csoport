@@ -1,0 +1,1 @@
+# AFP2021-22-D-csoport-Beadand-
