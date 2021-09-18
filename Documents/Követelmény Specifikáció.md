@@ -12,4 +12,11 @@ A cég nem rendelkezik weboldallal, csak egy kis bérelt irodával egy kevésbé
 
 #### **Jelenlegi üzleti folyamatok modellje**
 
-Kidolgozás alatt.
+Ingatlan felvétele a nyilvántartásba: Ingatlan paramétereinek lekérdezése az eladótól, majd azok rögzítése a táblázatba. Helyszínen fényképek készítése, azok beillesztés egy sablon dokumentumba, a paraméterek átírása, majd dokumentum nyomtatása a katalógus részére.
+
+Ingatlan árának meghatározása: Jellemzők (pl. alapterület, szobák száma, fűtés típusa, ingatlan állapota) felvitele egy saját készítésű Excel fájlba, amely egy képlettel kiszámol egy hozzávetőleges értéket, amit aztán az ingatlanosok személyes tapasztalat szerint finomíthatnak. Szükség esetén értékbecslő bevonása.
+
+Ingatlan meghirdetése: Fényképek feltöltése közösségi oldalakra kísérőszöveggel, melyben meg vannak adva a paraméterek, az ár és az ingatlaniroda központi telefonszáma. Szebb házak esetén fényképek kiragasztása az iroda kirakatába.
+
+Ingatlan eladása: Szándéknyilatkozat aláíratása a vevővel, foglaló elkérése készpénzben, ügyvéd értesítése adásvételi szerződés megírásának ügyében. Az ingatlan kikerül a katalógusból. Ha megtörtént a kulcsátadás, az ingatlan adatainak archiválása egy másik táblázatba, majd törlés a főtáblázatból, és dokumentumok elhelyezése egy archív kartotékba.
+
