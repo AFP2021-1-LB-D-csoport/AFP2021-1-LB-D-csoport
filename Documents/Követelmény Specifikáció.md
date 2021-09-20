@@ -26,8 +26,20 @@ Ingatlan eladása: Szándéknyilatkozat aláíratása a vevővel, foglaló elké
 
   Felhasználó ki- és bejelentkezési lehetőség. Bejelentkezve a felhasználó képes új hirdetés 	feladására, vagy a meglévő hirdetések szerkesztésére, törlésére. 
   
-
 - ###### Felhasználói fiók nélkül:
 
   Az oldal lehetőséget biztosít regisztrációra. Az ingatlanhirdetések böngészése, a szűrők használata, a képek megtekintése nem regisztrációhoz kötött. A regisztráció csak a hirdetések feladásához, testreszabásához, valamint törléséhez szükséges.
+
+#### **Követelménylista**
+
+- Az ingatlanhirdetések letisztult, egyszerű megjelenítése weblapon
+- Ingatlanhirdetések tárolása adatbázisban
+- A jelenleg is aktív hirdetések átemelése a katalógusból a weblapra
+- Új ingatlanhirdetések feladásának lehetősége
+- Ingatlanhirdetés aktiválási, deaktiválási, törlési opció
+- Ingatlanok keresése szűrésekkel
+- Ingatlan részletes leírásának megjelenítése új oldalon
+- Ingatlanokhoz tartozó képek feltöltésének, megjelenítésének biztosítása
+- Ellenőrzött regisztráció
+- Bejelentkezési lehetőség
 
