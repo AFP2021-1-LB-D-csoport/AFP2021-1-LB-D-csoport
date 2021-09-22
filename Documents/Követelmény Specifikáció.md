@@ -43,3 +43,16 @@ Ingatlan eladása: Szándéknyilatkozat aláíratása a vevővel, foglaló elké
 - Ellenőrzött regisztráció
 - Bejelentkezési lehetőség
 
+#### Fogalomtár
+
+Nyeles telek: Olyan telek, amely az utcáról egy hosszabb, de vékonyabb teleknyúlványon (ún. nyélen) keresztül érhető el. 
+
+Zártkerti ingatlan: Hivatalosan már nem létező, de a tulajdoni lapokon még rendszeresen előforduló fogalom; ma már hivatalosan külterületnek számít.
+
+Osztatlan közös ingatlan: Egy helyrajzi számon, egy ingatlan több személy tulajdonában van.
+
+Hasznos alapterület: A teljes alapterületnek olyan része, ahol a belmagasság legalább 1,90 m. A teljes alapterületbe a lakáshoz, üdülőhöz tartozó kiegészítő helyiségek kivételével valamennyi helyiség összegzett alapterülete, valamint a többszintes lakrészek belső lépcsőjének egy szinten számított vízszintes vetülete is beletartozik
+
+Szolgalmi út: Egy olyan út amely egy olyan telken van , amely átjárási lehetőséget,szolgáltat, egy másik, mögötte lévő telekre, amely nem rendelekzik bejárattal (közterületi ucakapcsolattal).
+
+Társasházi alapító okirat: egy olyan szerződés, melyet a társasház összes lakástulajdonosa aláír és köteles betartani. Rendszabályozza a társasház használatával, fenntartásával, gondozásával kapcsolatos jogokat, és azok megsértésével kapcsolatos kötelezettségeket.
