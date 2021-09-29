@@ -43,3 +43,10 @@ A cég nem rendelkezik weboldallal, csak egy kis bérelt irodával egy kevésbé
 
 #### Forgatókönyvek
 
+A felhasználó a főoldalon egy keresővel találkozik, ahol néhány alapdolog megadásával lekérdezhet egy listát az általa preferált ingatlanokról. A kereső alatt a legnépszerűbb házak listáját lehet megtekinteni. A kereső részt regisztráció nélkül lehet használni.
+
+A felső navigációs sávban található egy Főoldal, egy Belépés, egy Regisztráció és egy Rólunk menüpont. A Regisztációra kattintva egy űrlap jelenik meg, amelynek értelemszerű kitöltése után a felhasználó egy megerősítő emailt kap a megadott címére. Az ebben található linkre kattintva máris bejelentkezhet az oldalra. Regisztrációnál kötelező megadni egy nevet, egy email címet és egy jelszót, továbbá opcionálisan választható a hírlevélre feliratkozás.
+
+A Belépés pontra kattintva az email cím és a jelszó megadásával jelentkezhet be a regisztrált felhasználó. Sikeres bejelentkezés után megjelenik a felhasználónév a navigációs sáv szélén, arra rákattintva pedig szerkeszthetők a személyes adatok. Megjelenik továbbá egy Saját hirdetéseim menüpont is, ahol saját ingatlanokat hirdethetünk meg, illetve meglévő hirdetéseinket szerkeszthetjük. Hirdetésfeladásnál vannak kötelezően kitöltendő mezők (pl. település, alapterület, szobák száma,) és opcionálisan megadható jellemzők (pl. erkély, légkondicionáló, parkolás). Ezen kívül lehetőség van még fotók feltöltésére is.
+
+A Rólunk menüpont alatt egy pár soros bemutatkozást olvashatunk az ingatlanos cégtől, alant pedig a munkatársak fotóit és az elérhetőségeket tekinthetjük meg.
