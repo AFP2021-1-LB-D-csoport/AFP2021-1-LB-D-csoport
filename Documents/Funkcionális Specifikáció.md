@@ -39,6 +39,44 @@ A cég nem rendelkezik weboldallal, csak egy kis bérelt irodával egy kevésbé
 
 #### Képernyőtervek
 
+Belépés nélkül is meg kell jelennie az oldal valamennyi funkciójának, de annak használatát regisztrációhoz kell kötni.
+
+Tehát a belépett és regisztráció nélküli oldal között látszólag nincs különbség.
+
+A főoldalon az alábbi funkciók, elemek szerepeljenek:
+
+Az oldal logója: Az oldal tetején szerepeljen, egy sávban. Rákattintva az oldal főoldala jelenik meg.
+
+Ez alatt helyezkedik el a menüsor, ahol az alábbi lehetőségek fogadnak balról jobbra..
+
+Ingatlanos megbízása: 
+
+A buttonra kattintva, elnavigál egy másik oldalra, ahol ahol az iroda x ingatlanosának neve, fényképe és telefonszáma van feltüntetve.
+
+Hitelügyintézés: Szintén a logó alatti sorban szerepeljen.
+
+Itt is megjelenik az iroda alkalmazásában álló hitelügyintézők adatai.
+
+Hirdetés feladása: Utolsó előtti elem.
+
+A részletes keresőhöz hasonló oldal megjelenítése(később részletezve).
+
+Login/regisztráció: Ezzel a lehetőséggel, jobb oldalon elhelyezve zárulnak a funkciók.
+
+Ezen az oldalon meg kell adni egy felhasználónevet, jelszót, email címet, vezeték/keresztnevet.
+
+Kereső: Ez foglalja el a képernyő nagyrészét, annak is a közepét, hiszen ez lesz a leggyakrabban használt funkció.
+
+5 beviteli mező jelenjen meg(árMin, árMax, szobaSzám, lakásTerület, településNeve), illetve, két radiobutton, hogy eladó vagy kiadó ingatlant keres, illetve egy "Keresés" button.
+
+Ez alatt helyezkedik el közvetlenül egy "Részletes kereső" button, ami a részletes kereső oldalra navigál.
+
+Itt megjelenik a főkereső mellett egy jó pár checkbox, amit a felhasználó meg tud jelölni és ezáltal szűkíti a keresést.
+
+Az oldal alsó részén pedig az ingatlanpiaccal kapcsolatos hírek jelennek meg forrásmegjelöléssel.
+
+Legalul pedig a kapcsolat.
+
 
 
 #### Forgatókönyvek
