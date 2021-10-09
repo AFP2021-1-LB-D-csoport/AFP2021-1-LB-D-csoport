@@ -1,0 +1,1 @@
+<p style="text-align: center;">Bízza ránk a házát, tutira eladjuk!</p>

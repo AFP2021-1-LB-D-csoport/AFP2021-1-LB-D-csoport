@@ -1,0 +1,18 @@
+#navbar {
+    list-style-type: none;
+    margin: -10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: midnightblue;
+    color: wheat;
+    width: 100%;
+  }
+  
+  #navbar li {
+    float: left;
+  }
+
+  a {
+    color: wheat;
+    text-decoration: none;
+  }
