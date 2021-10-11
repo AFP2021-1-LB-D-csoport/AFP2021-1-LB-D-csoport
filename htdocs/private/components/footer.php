@@ -1,1 +1,1 @@
-<p style="text-align: center;">Bízza ránk a házát, tutira eladjuk!</p>
+<p style="text-align: center;">Lábléc: Bízza ránk a házát, tutira eladjuk!</p>
