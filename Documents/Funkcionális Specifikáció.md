@@ -53,7 +53,7 @@ Ingatlanos: A fentebb felsoroltakon kívül bárkinek a hirdetését módosítha
 
 Admin: A fentebb felsoroltakon kívül *ingatlanos* vagy *admin* jogosultsági körrel ruházhat fel felhasználókat, valamint el is veheti ezeket a jogokat, és bármikor törölheti bárkinek az accountját. A weboldal szerkesztéséhez is kizárólagos joga van.
 
-- ###### Használati esetek aktorok szerinti bontásban
+#### Használati esetek aktorok szerinti bontásban
 
 1.) Látogató regisztráció nélkül böngészi az oldalt:
 oldal felkeresése -> böngészősáv használata -> lenyíló menük használata -> elérhető ingatlanok listázása -> elérhető ingatlanok listázása megadott feltételek alapján -> elérhető ingatlan kiválasztása, részletek megtekintése -> adott ingatlanhoz mellékelt fotók böngészése -> kapcsolatfelvétel az ingatlanossal.
