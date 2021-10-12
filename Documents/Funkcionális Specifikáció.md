@@ -43,7 +43,15 @@ A cég nem rendelkezik weboldallal, csak egy kis bérelt irodával egy kevésbé
 
 #### Használati esetek
 
+A weblapot négyféle szerepkörben lehet használni: látogató (nem regisztrált/bejelentkezett felhasználó), tag (bejelentkezett felhasználó), ingatlanos, admin. Ezek jogosultságai a következők:
 
+Látogató: Szabadon böngészheti az ingatlanhirdetéseket, szűréseket végezhet a keresővel, kinagyíthatja a fotókat, elolvashatja a Rólunk szekciót, valamint regisztrálhat.
+
+Tag: A fentebb felsoroltakon kívül elmenthet magának hirdetéseket, továbbá saját hirdetéseket tehet közzé egy külön lapon, mely csak a bejelentkezés után válik láthatóvá. Saját hirdetéseit bármikor módosíthatja vagy törölheti.
+
+Ingatlanos: A fentebb felsoroltakon kívül bárkinek a hirdetését módosíthatja vagy törölheti.
+
+Admin: A fentebb felsoroltakon kívül *ingatlanos* vagy *admin* jogosultsági körrel ruházhat fel felhasználókat, valamint el is veheti ezeket a jogokat, és bármikor törölheti bárkinek az accountját. A weboldal szerkesztéséhez is kizárólagos joga van.
 
 #### Képernyőtervek
 
@@ -62,8 +70,6 @@ Az oldal logója az oldal tetején szerepeljen, egy sávban. Rákattintva az old
 Kereső: Ez foglalja el a képernyő nagyrészét, annak is a közepét, hiszen ez lesz a leggyakrabban használt funkció. 5 beviteli mező jelenjen meg(árMin, árMax, szobaSzám, lakásTerület, településNeve), illetve, két radiobutton, hogy eladó vagy kiadó ingatlant keres, illetve egy "Keresés" button. Ez alatt helyezkedik el közvetlenül egy "Részletes kereső" button, ami a részletes kereső oldalra navigál. Itt megjelenik a főkereső mellett egy jó pár checkbox, amit a felhasználó meg tud jelölni és ezáltal szűkíti a keresést.
 
 Az oldal alsó részén pedig az ingatlanpiaccal kapcsolatos hírek jelennek meg forrásmegjelöléssel. Legalul pedig a kapcsolat.
-
-
 
 #### Forgatókönyvek
 
