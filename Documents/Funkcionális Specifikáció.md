@@ -53,6 +53,8 @@ Ingatlanos: A fentebb felsoroltakon kívül bárkinek a hirdetését módosítha
 
 Admin: A fentebb felsoroltakon kívül *ingatlanos* vagy *admin* jogosultsági körrel ruházhat fel felhasználókat, valamint el is veheti ezeket a jogokat, és bármikor törölheti bárkinek az accountját. A weboldal szerkesztéséhez is kizárólagos joga van.
 
+![use_case_UML](https://user-images.githubusercontent.com/85219194/137003847-74c9c9af-eb86-4363-87ec-b6a9bd0f5d7b.JPG)
+
 #### Használati esetek aktorok szerinti bontásban
 
 1.) Látogató regisztráció nélkül böngészi az oldalt:
