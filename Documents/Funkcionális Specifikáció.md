@@ -43,7 +43,7 @@ A cég nem rendelkezik weboldallal, csak egy kis bérelt irodával egy kevésbé
 
 #### Használati esetek
 
-A weblapot négyféle szerepkörben lehet használni: látogató (nem regisztrált/bejelentkezett felhasználó), tag (bejelentkezett felhasználó), ingatlanos, admin. Ezek jogosultságai a következők:
+A weblapot négyféle szerepkörben lehet használni: látogató (nem regisztrált/bejelentkezett felhasználó), tag (bejelentkezett felhasználó), ingatlanos, admin. Ezek jogosultságai a következők (aktorok):
 
 Látogató: Szabadon böngészheti az ingatlanhirdetéseket, szűréseket végezhet a keresővel, kinagyíthatja a fotókat, elolvashatja a Rólunk szekciót, valamint regisztrálhat.
 
@@ -52,6 +52,26 @@ Tag: A fentebb felsoroltakon kívül elmenthet magának hirdetéseket, továbbá
 Ingatlanos: A fentebb felsoroltakon kívül bárkinek a hirdetését módosíthatja vagy törölheti.
 
 Admin: A fentebb felsoroltakon kívül *ingatlanos* vagy *admin* jogosultsági körrel ruházhat fel felhasználókat, valamint el is veheti ezeket a jogokat, és bármikor törölheti bárkinek az accountját. A weboldal szerkesztéséhez is kizárólagos joga van.
+
+- ###### Használati esetek aktorok szerinti bontásban
+
+1.) Látogató regisztráció nélkül böngészi az oldalt:
+oldal felkeresése -> böngészősáv használata -> lenyíló menük használata -> elérhető ingatlanok listázása -> elérhető ingatlanok listázása megadott feltételek alapján -> elérhető ingatlan kiválasztása, részletek megtekintése -> adott ingatlanhoz mellékelt fotók böngészése -> kapcsolatfelvétel az ingatlanossal.
+
+2.) Látogató regisztrál: 
+oldal felkeresése -> menüsávról a regisztráció kiválasztása -> személyes adatok megadása -> elérhetőségek megadása -> hozzájárulási nyilatkozat, használati feltételek elfogadása -> sikeres regisztrációról visszaigazolás
+
+3.) Regisztrált tag hirdetést ad fel:
+oldal felkeresése -> belépés a személyes profilba -> hirdetés feladása opció kiválasztása -> ingatlan adatainak megadása -> leírás az ingatlanról -> kép csatolása
+
+4.) Regisztrált felhasználó megnézi saját hirdetéseit:
+oldal felkeresése -> belépés a személyes profilba -> feladott hirdetések listázása -> részletek megtekintése -> hirdetés adatainak módosítása, törlése
+
+5.) Ingatlanos hirdetéseket módosít:
+oldal felkeresése -> bejelentkezés a személyes profilba -> regisztrált felhasználók hirdetéseinek listázása -> hirdetés adatainak módosítása, törlése -> hirdetéshez ingatlanost rendel
+
+6.) Admin:
+oldal admin felületére belép -> felhasználók jogosultsági körét módosítja
 
 #### Képernyőtervek
 
