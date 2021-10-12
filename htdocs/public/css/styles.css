@@ -1,7 +1,6 @@
 #navbar {
     list-style-type: none;
-    margin: -10px;
-    padding: 0;
+    margin: -30px;
     overflow: hidden;
     background-color: midnightblue;
     color: wheat;
@@ -10,6 +9,7 @@
   
   #navbar li {
     float: right;
+    padding: 10px;
   }
 
   a {

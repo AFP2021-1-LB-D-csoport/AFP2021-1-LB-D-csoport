@@ -3,7 +3,7 @@
 function print_menu(&$menu, $return_html = FALSE){
     $menu_string = '';
     $menu_string .= '<ul id="navbar">';
-    foreach ($menu as &$menu_item){
+    foreach ($menu as $menu_item){
         $menu_string .= '<li '. (array_key_exists('li_extra', $menu_item) ? 
             generate_attributes($menu_item['li_extra']) : '').'><a href="'.$menu_item['href'].'" '
             . (array_key_exists('a_extra', $menu_item) ? generate_attributes($menu_item['a_extra']) : '')
