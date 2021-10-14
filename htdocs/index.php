@@ -1,5 +1,6 @@
 <?php
 session_start();
+session_unset();
 require_once 'private/utils/require.php';
 ?>
 
@@ -7,8 +8,8 @@ require_once 'private/utils/require.php';
 <head>
     <meta charset="UTF-8">
     <title>Letső, Nyíri, Safarcsik & Telegdi Real Estate</title>
-    <link rel="stylesheet" href="<?=CSS_DIR?>">
-    <script src="<?=JS_DIR?>"></script>
+    <link rel="stylesheet" href="<?=CSS_FILE?>">
+    <script src="<?=JS_FILE?>"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>

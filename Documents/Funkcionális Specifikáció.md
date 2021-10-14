@@ -22,62 +22,76 @@ A cég nem rendelkezik weboldallal, csak egy kis bérelt irodával egy kevésbé
 
 #### Követelménylista
 
-- Az ingatlanhirdetések letisztult, egyszerű megjelenítése weblapon
-- Ingatlanhirdetések tárolása adatbázisban
-- A jelenleg is aktív hirdetések átemelése a katalógusból a weblapra
-- Új ingatlanhirdetések feladásának lehetősége
-- Ingatlanhirdetés aktiválási, deaktiválási, törlési opció
-- Ingatlanok keresése szűrésekkel
-- Ingatlan részletes leírásának megjelenítése új oldalon
-- Ingatlanokhoz tartozó képek feltöltésének, megjelenítésének biztosítása
-- Ellenőrzött regisztráció
-- Bejelentkezési lehetőség
+- **Az ingatlanhirdetések letisztult, egyszerű megjelenítése weblapon:**
+  	Az oldalon történő navigálás az egyszerű felhasználók számára sem okoz nehézséget. A felület halvány, kellemes színekkel jelenik meg. A hirdetések alapesetben listás jelleggel jelenjenek meg. Ez a megjelenítés csupán néhány fontosabb információt tartalmazzon. 
+- **Ingatlanhirdetések tárolása adatbázisban**
+- **A jelenleg is aktív hirdetések átemelése a katalógusból a weblapra:**
+  	A korábbi, papíralapú hirdetések áthelyezésre kerülnek az oldalra. Ebben az esetben a weblap a kezdetekben sem lesz üres.
+- **Új ingatlanhirdetések feladásának lehetősége:**
+  	A bejelentkezett felhasználó számára lehetőség nyílik új hirdetést feladni. A hirdetés véglegesítéséhez szükséges néhány kötelező adatot megadni(pl. ár, alapterület, ingatlan jellege, stb.), de ezeken kívül opcionális adatok is rögzíthetők(pl. kép, leírás, fűtés típusa, stb.). Amennyiben a kötelező adatok nincsenek kitöltve a rendszer hibaüzenetet küld.
+- **Ingatlanhirdetés aktiválási, deaktiválási, törlési opció:**
+  	A bejelentkezett, hirdetéssel rendelkező felhasználó képes a hirdetéseit menedzselni. Ha van aktív hirdetése, akkor azt lehet törölni, deaktiválni. Ha a törlés opciót választja a felhasználó, akkor a hirdetés véglegesen törölve lesz az adatbázisból is. Ammenyiben a hirdetés inaktív, akkor lehetséges azt aktiválni. Ha a hirdetés aktív, akkor a keresések eredményeként megjelenhet. Ellenkező esetben nem jelenhet meg.
+- **Ingatlanok keresése szűrésekkel:**
+  	Az oldalon található hirdetéseken lehet szűrést alkalmazni(pl. ár, alapterület, ingatlan jellege, stb.). Ekkor csak a megadott feltételeknek megfelelő hirdetések fognak megjelenni, ha léteznek ilyenek. Előfordulhat olyan eset, hogy nincs a keresésnek megfelelő hirdetés. Ekkor az oldalon a "Nem található a keresésnek megfelelő hirdetés." üzenet jelenik meg.
+- **Ingatlan részletes leírásának megjelenítése új oldalon:**
+  	A hirdetések böngészése közben az oldal lehetőséget biztosít részletes megjelenítésre is. Ez úgy valósul meg, hogy a hirdetésre kattintva az oldal egy másik lapra irányít, ahol megjelenik minden elérhető információ az adott ingatlanról.
+- **Ingatlanokhoz tartozó képek feltöltésének, megjelenítésének biztosítása**
+- **Bejelentkezési lehetőség:** 
+  	A felhasználó a felhasználónév és jelszó pár megadásával beléphet a rendszerbe. Ha a felhasználónév vagy a jelszó helytelen, akkor az oldal üzen a felhasználónak: "Téves felhasználónév vagy jelszó."
+- **Ellenőrzött regisztráció**:
+  	Amennyiben a felhasználó még nem rendelkezik fiókkal, abban az esetben az "Új felhasználó létrehozása" opcióval regisztrálhat. A regisztráció során bizonyos adatok megadása kötelező. Ha ezek nincsenek kitöltve, akkor a rendszer "Sikertelen regisztráció." hibaüzenetet küld.
 
 #### Használati esetek
 
+A weblapot négyféle szerepkörben lehet használni: látogató (nem regisztrált/bejelentkezett felhasználó), tag (bejelentkezett felhasználó), ingatlanos, admin. Ezek jogosultságai a következők (aktorok):
 
+Látogató: Szabadon böngészheti az ingatlanhirdetéseket, szűréseket végezhet a keresővel, kinagyíthatja a fotókat, elolvashatja a Rólunk szekciót, valamint regisztrálhat.
+
+Tag: A fentebb felsoroltakon kívül elmenthet magának hirdetéseket, továbbá saját hirdetéseket tehet közzé egy külön lapon, mely csak a bejelentkezés után válik láthatóvá. Saját hirdetéseit bármikor módosíthatja vagy törölheti.
+
+Ingatlanos: A fentebb felsoroltakon kívül bárkinek a hirdetését módosíthatja vagy törölheti.
+
+Admin: A fentebb felsoroltakon kívül *ingatlanos* vagy *admin* jogosultsági körrel ruházhat fel felhasználókat, valamint el is veheti ezeket a jogokat, és bármikor törölheti bárkinek az accountját. A weboldal szerkesztéséhez is kizárólagos joga van.
+
+![use_case_UML](https://user-images.githubusercontent.com/85219194/137003847-74c9c9af-eb86-4363-87ec-b6a9bd0f5d7b.JPG)
+
+#### Használati esetek aktorok szerinti bontásban
+
+1.) Látogató regisztráció nélkül böngészi az oldalt:
+oldal felkeresése -> böngészősáv használata -> lenyíló menük használata -> elérhető ingatlanok listázása -> elérhető ingatlanok listázása megadott feltételek alapján -> elérhető ingatlan kiválasztása, részletek megtekintése -> adott ingatlanhoz mellékelt fotók böngészése -> kapcsolatfelvétel az ingatlanossal.
+
+2.) Látogató regisztrál: 
+oldal felkeresése -> menüsávról a regisztráció kiválasztása -> személyes adatok megadása -> elérhetőségek megadása -> hozzájárulási nyilatkozat, használati feltételek elfogadása -> sikeres regisztrációról visszaigazolás
+
+3.) Regisztrált tag hirdetést ad fel:
+oldal felkeresése -> belépés a személyes profilba -> hirdetés feladása opció kiválasztása -> ingatlan adatainak megadása -> leírás az ingatlanról -> kép csatolása
+
+4.) Regisztrált felhasználó megnézi saját hirdetéseit:
+oldal felkeresése -> belépés a személyes profilba -> feladott hirdetések listázása -> részletek megtekintése -> hirdetés adatainak módosítása, törlése
+
+5.) Ingatlanos hirdetéseket módosít:
+oldal felkeresése -> bejelentkezés a személyes profilba -> regisztrált felhasználók hirdetéseinek listázása -> hirdetés adatainak módosítása, törlése -> hirdetéshez ingatlanost rendel
+
+6.) Admin:
+oldal admin felületére belép -> felhasználók jogosultsági körét módosítja
 
 #### Képernyőtervek
 
-Belépés nélkül is meg kell jelennie az oldal valamennyi funkciójának, de annak használatát regisztrációhoz kell kötni.
+Belépés nélkül is meg kell jelennie az oldal valamennyi funkciójának, de annak használatát regisztrációhoz kell kötni. Tehát a belépett és regisztráció nélküli oldal között látszólag nincs különbség.
 
-Tehát a belépett és regisztráció nélküli oldal között látszólag nincs különbség.
+Az oldal logója az oldal tetején szerepeljen, egy sávban. Rákattintva az oldal főoldala jelenik meg. Ez alatt helyezkedik el a menüsor, ahol az alábbi lehetőségek fogadnak balról jobbra:
 
-A főoldalon az alábbi funkciók, elemek szerepeljenek:
+- Ingatlanos megbízása:  A buttonra kattintva, elnavigál egy másik oldalra, ahol ahol az iroda x ingatlanosának neve, fényképe és telefonszáma van feltüntetve.
 
-Az oldal logója: Az oldal tetején szerepeljen, egy sávban. Rákattintva az oldal főoldala jelenik meg.
+- Hitelügyintézés: Szintén a logó alatti sorban szerepeljen. Itt is megjelenik az iroda alkalmazásában álló hitelügyintézők adatai.
 
-Ez alatt helyezkedik el a menüsor, ahol az alábbi lehetőségek fogadnak balról jobbra..
+- Hirdetés feladása: Utolsó előtti elem. A részletes keresőhöz hasonló oldal megjelenítése(később részletezve).
 
-Ingatlanos megbízása: 
+- Login/regisztráció: Ezzel a lehetőséggel, jobb oldalon elhelyezve zárulnak a funkciók. Ezen az oldalon meg kell adni egy felhasználónevet, jelszót, email címet, vezeték/keresztnevet.
 
-A buttonra kattintva, elnavigál egy másik oldalra, ahol ahol az iroda x ingatlanosának neve, fényképe és telefonszáma van feltüntetve.
+Kereső: Ez foglalja el a képernyő nagyrészét, annak is a közepét, hiszen ez lesz a leggyakrabban használt funkció. 5 beviteli mező jelenjen meg(árMin, árMax, szobaSzám, lakásTerület, településNeve), illetve, két radiobutton, hogy eladó vagy kiadó ingatlant keres, illetve egy "Keresés" button. Ez alatt helyezkedik el közvetlenül egy "Részletes kereső" button, ami a részletes kereső oldalra navigál. Itt megjelenik a főkereső mellett egy jó pár checkbox, amit a felhasználó meg tud jelölni és ezáltal szűkíti a keresést.
 
-Hitelügyintézés: Szintén a logó alatti sorban szerepeljen.
-
-Itt is megjelenik az iroda alkalmazásában álló hitelügyintézők adatai.
-
-Hirdetés feladása: Utolsó előtti elem.
-
-A részletes keresőhöz hasonló oldal megjelenítése(később részletezve).
-
-Login/regisztráció: Ezzel a lehetőséggel, jobb oldalon elhelyezve zárulnak a funkciók.
-
-Ezen az oldalon meg kell adni egy felhasználónevet, jelszót, email címet, vezeték/keresztnevet.
-
-Kereső: Ez foglalja el a képernyő nagyrészét, annak is a közepét, hiszen ez lesz a leggyakrabban használt funkció.
-
-5 beviteli mező jelenjen meg(árMin, árMax, szobaSzám, lakásTerület, településNeve), illetve, két radiobutton, hogy eladó vagy kiadó ingatlant keres, illetve egy "Keresés" button.
-
-Ez alatt helyezkedik el közvetlenül egy "Részletes kereső" button, ami a részletes kereső oldalra navigál.
-
-Itt megjelenik a főkereső mellett egy jó pár checkbox, amit a felhasználó meg tud jelölni és ezáltal szűkíti a keresést.
-
-Az oldal alsó részén pedig az ingatlanpiaccal kapcsolatos hírek jelennek meg forrásmegjelöléssel.
-
-Legalul pedig a kapcsolat.
-
-
+Az oldal alsó részén pedig az ingatlanpiaccal kapcsolatos hírek jelennek meg forrásmegjelöléssel. Legalul pedig a kapcsolat.
 
 #### Forgatókönyvek
 

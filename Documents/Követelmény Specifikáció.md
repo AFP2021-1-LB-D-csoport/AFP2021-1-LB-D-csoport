@@ -10,6 +10,24 @@ A megrendelő egy gyorsan fejlődő, ingatlanközvetítéssel foglalkozó cég. 
 
 A cég nem rendelkezik weboldallal, csak egy kis bérelt irodával egy kevésbé forgalmas helyen. Kizárólag közösségi oldalakon hirdetik magukat, reklámra nem költenek. Az érdeklődőkkel jobbára telefonon, esetleg emailben tartják a kapcsolatot. Az aktuális ingatlanokat előzetesen egy katalógusban lehet megtekinteni a cég irodájában. További érdeklődés esetén az egyik ingatlanos házhoz viszi a kuncsaftokat. A nyilvántartás Excel táblázatban valósul meg, minden személyes és pénzügyi adat ilyen formában van tárolva.
 
+#### **Vágyálomrendszer**
+
+A vállalkozás bővítése érdekében létre szeretnénk hozni egy weboldalt, ahol ügyfeleinknek lehetősége nyílik megtekinteni a nyilvántartásunkban szereplő ingatlanokat. A weboldal a cégünk által közvetített ingatlanok adatait nyilvántartó adatbázishoz kapcsolódik, mely adatbázis a cég adminisztrációját is támogatná, segítségével az üzlet fejlesztését, teljesítményét mérő riportokat készíthetnénk el. A nyilvántartás online kezelésével nem csak a cégvezetés, de a vevők is naprakész információhoz juthatnak a közvetített ingatlanokról. Az adatbázisnak emiatt tárolnia kell a cég működéséhez szükséges adatokat (például: munkatársak adatai), valamint a meghirdetett ingatlanok adatait is, az ingatlanról feltöltött képpel együtt.
+
+A weboldal megvalósítása során fontos szempont, hogy könnyen üzemeltethető legyen, ugyanakkor ügyfeleink is könnyen elérjék, platformfüggetlen legyen, reszponzív felülettel rendelkezzen. A weboldal felépítése során fontos a könnyű áttekinthetőség.
+
+Cégünk a jövőben lehetőséget szeretne biztosítani arra, hogy hirdetők közvetlenül a weboldalon keresztül hirdethessenek, ezért A weboldalon lehetőséget kell biztosítani új hirdetők regisztrációjára, valamint a meghirdetni kívánt ingatlanadatok rögzítésére. 
+
+#### **A rendszerre vonatkozó szabályok**
+
+Regisztrált ügyfeleink adatait a hatályos adatvédelmi előírások, a GDPR szabályzat alapján vagyunk kötelesek tárolni.
+
+Az ingatlanközvetítői tevékenységet a 1993. évi LXXVIII. törvény a lakások és helyiségek bérletére, valamint az elidegenítésükre vonatkozó egyes szabályokról (Lakástörvény) c. jogszabály szabályozza, melynek rendelkezéseit cégünknek maradéktalanul be kell tartania.
+
+A weboldal fejlesztése PHP, HTML, CSS, JavaScript alapokon történjen, a képek tárolási formátuma jpeg, png.
+
+Az adatbázis MySQL alapokon készüljön.
+
 #### **Jelenlegi üzleti folyamatok modellje**
 
 Ingatlan felvétele a nyilvántartásba: Ingatlan paramétereinek lekérdezése az eladótól, majd azok rögzítése a táblázatba. Helyszínen fényképek készítése, azok beillesztés egy sablon dokumentumba, a paraméterek átírása, majd dokumentum nyomtatása a katalógus részére.
