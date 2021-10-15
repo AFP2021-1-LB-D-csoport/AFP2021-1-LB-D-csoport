@@ -50,16 +50,18 @@ Ingatlan eladása: Szándéknyilatkozat aláíratása a vevővel, foglaló elké
 
 #### **Követelménylista**
 
-- Az ingatlanhirdetések letisztult, egyszerű megjelenítése weblapon
-- Ingatlanhirdetések tárolása adatbázisban
-- A jelenleg is aktív hirdetések átemelése a katalógusból a weblapra
-- Új ingatlanhirdetések feladásának lehetősége
-- Ingatlanhirdetés aktiválási, deaktiválási, törlési opció
-- Ingatlanok keresése szűrésekkel
-- Ingatlan részletes leírásának megjelenítése új oldalon
-- Ingatlanokhoz tartozó képek feltöltésének, megjelenítésének biztosítása
-- Ellenőrzött regisztráció
-- Bejelentkezési lehetőség
+| Kód  |                          Megnevezés                          |
+| :--: | :----------------------------------------------------------: |
+|  K1  | Az ingatlanhirdetések letisztult, egyszerű megjelenítése weblapon |
+|  K2  |           Ingatlanhirdetések tárolása adatbázisban           |
+|  K3  | A jelenleg is aktív hirdetések átemelése a katalógusból a weblapra |
+|  K4  |                   Ellenőrzött regisztráció                   |
+|  K5  |                   Bejelentkezési lehetőség                   |
+|  K6  |         Új ingatlanhirdetések feladásának lehetősége         |
+|  K7  |   Ingatlanhirdetés aktiválási, deaktiválási, törlési opció   |
+|  K8  |               Ingatlanok keresése szűrésekkel                |
+|  K9  |    Ingatlan részletes leírásának megjelenítése új oldalon    |
+| K10  | Ingatlanokhoz tartozó képek feltöltésének, megjelenítésének biztosítása |
 
 #### Fogalomtár
 
