@@ -22,24 +22,20 @@ A cég nem rendelkezik weboldallal, csak egy kis bérelt irodával egy kevésbé
 
 #### Követelménylista
 
-- **Az ingatlanhirdetések letisztult, egyszerű megjelenítése weblapon:**
-  	Az oldalon történő navigálás az egyszerű felhasználók számára sem okoz nehézséget. A felület halvány, kellemes színekkel jelenik meg. A hirdetések alapesetben listás jelleggel jelenjenek meg. Ez a megjelenítés csupán néhány fontosabb információt tartalmazzon. 
-- **Ingatlanhirdetések tárolása adatbázisban**
-- **A jelenleg is aktív hirdetések átemelése a katalógusból a weblapra:**
-  	A korábbi, papíralapú hirdetések áthelyezésre kerülnek az oldalra. Ebben az esetben a weblap a kezdetekben sem lesz üres.
-- **Új ingatlanhirdetések feladásának lehetősége:**
-  	A bejelentkezett felhasználó számára lehetőség nyílik új hirdetést feladni. A hirdetés véglegesítéséhez szükséges néhány kötelező adatot megadni(pl. ár, alapterület, ingatlan jellege, stb.), de ezeken kívül opcionális adatok is rögzíthetők(pl. kép, leírás, fűtés típusa, stb.). Amennyiben a kötelező adatok nincsenek kitöltve a rendszer hibaüzenetet küld.
-- **Ingatlanhirdetés aktiválási, deaktiválási, törlési opció:**
-  	A bejelentkezett, hirdetéssel rendelkező felhasználó képes a hirdetéseit menedzselni. Ha van aktív hirdetése, akkor azt lehet törölni, deaktiválni. Ha a törlés opciót választja a felhasználó, akkor a hirdetés véglegesen törölve lesz az adatbázisból is. Ammenyiben a hirdetés inaktív, akkor lehetséges azt aktiválni. Ha a hirdetés aktív, akkor a keresések eredményeként megjelenhet. Ellenkező esetben nem jelenhet meg.
-- **Ingatlanok keresése szűrésekkel:**
-  	Az oldalon található hirdetéseken lehet szűrést alkalmazni(pl. ár, alapterület, ingatlan jellege, stb.). Ekkor csak a megadott feltételeknek megfelelő hirdetések fognak megjelenni, ha léteznek ilyenek. Előfordulhat olyan eset, hogy nincs a keresésnek megfelelő hirdetés. Ekkor az oldalon a "Nem található a keresésnek megfelelő hirdetés." üzenet jelenik meg.
-- **Ingatlan részletes leírásának megjelenítése új oldalon:**
-  	A hirdetések böngészése közben az oldal lehetőséget biztosít részletes megjelenítésre is. Ez úgy valósul meg, hogy a hirdetésre kattintva az oldal egy másik lapra irányít, ahol megjelenik minden elérhető információ az adott ingatlanról.
-- **Ingatlanokhoz tartozó képek feltöltésének, megjelenítésének biztosítása**
-- **Bejelentkezési lehetőség:** 
-  	A felhasználó a felhasználónév és jelszó pár megadásával beléphet a rendszerbe. Ha a felhasználónév vagy a jelszó helytelen, akkor az oldal üzen a felhasználónak: "Téves felhasználónév vagy jelszó."
-- **Ellenőrzött regisztráció**:
-  	Amennyiben a felhasználó még nem rendelkezik fiókkal, abban az esetben az "Új felhasználó létrehozása" opcióval regisztrálhat. A regisztráció során bizonyos adatok megadása kötelező. Ha ezek nincsenek kitöltve, akkor a rendszer "Sikertelen regisztráció." hibaüzenetet küld.
+| Kód  |                          Megnevezés                          | Leírás                                                       |
+| :--: | :----------------------------------------------------------: | ------------------------------------------------------------ |
+|  K1  | Az ingatlanhirdetések letisztult, egyszerű megjelenítése weblapon | Az oldalon történő navigálás az egyszerű felhasználók számára sem okoz nehézséget. A felület halvány, kellemes színekkel jelenik meg. A hirdetések alapesetben listás jelleggel jelenjenek meg. Ez a megjelenítés csupán néhány fontosabb információt tartalmazzon. |
+|  K2  |           Ingatlanhirdetések tárolása adatbázisban           | Az egyszerű és gyors adatelérés érdekében az adatok tárolása adatbázisban történjen. |
+|  K3  | A jelenleg is aktív hirdetések átemelése a katalógusból a weblapra | A korábbi, papíralapú hirdetések áthelyezésre kerülnek az oldalra. Ebben az esetben a weblap a kezdetekben sem lesz üres. |
+|  K4  |                   Ellenőrzött regisztráció                   | Amennyiben a felhasználó még nem rendelkezik fiókkal, abban az esetben az "Új felhasználó létrehozása" opcióval regisztrálhat. A regisztráció során bizonyos adatok megadása kötelező. Ha ezek nincsenek kitöltve, akkor a rendszer "Sikertelen regisztráció." hibaüzenetet küld. |
+|  K5  |                   Bejelentkezési lehetőség                   | A felhasználó a felhasználónév és jelszó pár megadásával beléphet a rendszerbe. Ha a felhasználónév vagy a jelszó helytelen, akkor az oldal üzen a felhasználónak: "Téves felhasználónév vagy jelszó." |
+|  K6  |         Új ingatlanhirdetések feladásának lehetősége         | A bejelentkezett felhasználó számára lehetőség nyílik új hirdetést feladni. A hirdetés véglegesítéséhez szükséges néhány kötelező adatot megadni(pl. ár, alapterület, ingatlan jellege, stb.), de ezeken kívül opcionális adatok is rögzíthetők(pl. kép, leírás, fűtés típusa, stb.). Amennyiben a kötelező adatok nincsenek kitöltve a rendszer hibaüzenetet küld. |
+|  K7  |   Ingatlanhirdetés aktiválási, deaktiválási, törlési opció   | A bejelentkezett, hirdetéssel rendelkező felhasználó képes a hirdetéseit menedzselni. Ha van aktív hirdetése, akkor azt lehet törölni, deaktiválni. Ha a törlés opciót választja a felhasználó, akkor a hirdetés véglegesen törölve lesz az adatbázisból is. Ammenyiben a hirdetés inaktív, akkor lehetséges azt aktiválni. Ha a hirdetés aktív, akkor a keresések eredményeként megjelenhet. Ellenkező esetben nem jelenhet meg. |
+|  K8  |               Ingatlanok keresése szűrésekkel                | Az oldalon található hirdetéseken lehet szűrést alkalmazni(pl. ár, alapterület, ingatlan jellege, stb.). Ekkor csak a megadott feltételeknek megfelelő hirdetések fognak megjelenni, ha léteznek ilyenek. Előfordulhat olyan eset, hogy nincs a keresésnek megfelelő hirdetés. Ekkor az oldalon a "Nem található a keresésnek megfelelő hirdetés." üzenet jelenik meg. |
+|  K9  |    Ingatlan részletes leírásának megjelenítése új oldalon    | A hirdetések böngészése közben az oldal lehetőséget biztosít részletes megjelenítésre is. Ez úgy valósul meg, hogy a hirdetésre kattintva az oldal egy másik lapra irányít, ahol megjelenik minden elérhető információ az adott ingatlanról. |
+| K10  | Ingatlanokhoz tartozó képek feltöltésének, megjelenítésének biztosítása | A hirdetésfeladásnál a "Kép feltöltése" gombra kattintva lehetőség nyílik kép feltöltésére. |
+
+
 
 #### Használati esetek
 
