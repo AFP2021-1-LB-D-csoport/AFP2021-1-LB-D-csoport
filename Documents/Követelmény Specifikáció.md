@@ -42,11 +42,21 @@ Ingatlan eladása: Szándéknyilatkozat aláíratása a vevővel, foglaló elké
 
 - ###### Felhasználói fiók birtokában: 
 
-  Felhasználó ki- és bejelentkezési lehetőség. Bejelentkezve a felhasználó képes új hirdetés 	feladására, vagy a meglévő hirdetések szerkesztésére, törlésére. 
+  - Bejelentkezés: főoldal => bejelentkezés => felhasználónév, jelszó megadása
+  - Új hirdetés feladása: bejelentkezés felhasználói jogkörrel => menü => hirdetések kezelése => új hirdetés feladása => adatok kitöltése => véglegesítés
+  - Hirdetés szerkesztése: bejelentkezés felhasználói jogkörrel => menü => hirdetések kezelése => hirdetés szerkesztése => adatok módosítása => véglegesítés
+  - Hirdetés törlése: bejelentkezés felhasználói jogkörrel => menü => hirdetések kezelése => hirdetés törlése => véglegesítés
+  - Hirdetés deaktiválása: bejelentkezés felhasználói jogkörrel => menü => hirdetések kezelése => hirdetés szerkesztése => deaktiválás => véglegesítés
+  - Felhasználói adatok módosítása: bejelentkezés felhasználói jogkörrel => menü => fiók kezelése => adatok módosítása => véglegesítés
+  - Admin belépés: főoldal => bejelentkezés => admin felhasználónév és jelszó megadása
+  - Az admin képes új hirdetést feladni és bármely hirdetést szerkeszteni, törölni
   
 - ###### Felhasználói fiók nélkül:
 
-  Az oldal lehetőséget biztosít regisztrációra. Az ingatlanhirdetések böngészése, a szűrők használata, a képek megtekintése nem regisztrációhoz kötött. A regisztráció csak a hirdetések feladásához, testreszabásához, valamint törléséhez szükséges.
+  - Regisztráció: főoldal => regisztráció gomb => adatok kitöltése => véglegesítés
+  - Keresés:  a felhasználó a keresőmezőbe beírja a keresni kívánt kulcsszavakat => keresés => találatok megjelenítése
+  - Részletes keresés: a felhasználó a részletes keresés opciót választja ki => megadja a keresés specifikációit => keresés => találatok megjelenítése
+  - Információ az oldalról: főoldal => rólunk gomb => átirányítás
 
 #### **Követelménylista**
 
