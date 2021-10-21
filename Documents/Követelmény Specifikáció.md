@@ -42,7 +42,7 @@ Ingatlan eladása: Szándéknyilatkozat aláíratása a vevővel, foglaló elké
 
 - ###### Felhasználói fiók birtokában: 
 
-  - Bejelentkezés: főoldal => bejelentkezés => felhasználónév, jelszó megadása
+  - Bejelentkezés: főoldal => bejelentkezés gomb => felhasználónév, jelszó megadása
   - Új hirdetés feladása: bejelentkezés felhasználói jogkörrel => menü => hirdetések kezelése => új hirdetés feladása => adatok kitöltése => véglegesítés
   - Hirdetés szerkesztése: bejelentkezés felhasználói jogkörrel => menü => hirdetések kezelése => hirdetés szerkesztése => adatok módosítása => véglegesítés
   - Hirdetés törlése: bejelentkezés felhasználói jogkörrel => menü => hirdetések kezelése => hirdetés törlése => véglegesítés
