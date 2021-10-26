@@ -18,7 +18,11 @@ A cég nem rendelkezik weboldallal, csak egy kis bérelt irodával egy kevésbé
 
 #### Vágyálom rendszer leírása
 
+A vállalkozás bővítése érdekében létre szeretnénk hozni egy weboldalt, ahol ügyfeleinknek lehetősége nyílik megtekinteni a nyilvántartásunkban szereplő ingatlanokat. A weboldal a cégünk által közvetített ingatlanok adatait nyilvántartó adatbázishoz kapcsolódik, mely adatbázis a cég adminisztrációját is támogatná, segítségével az üzlet fejlesztését, teljesítményét mérő riportokat készíthetnénk el. A nyilvántartás online kezelésével nem csak a cégvezetés, de a vevők is naprakész információhoz juthatnak a közvetített ingatlanokról. Az adatbázisnak emiatt tárolnia kell a cég működéséhez szükséges adatokat (például: munkatársak adatai), valamint a meghirdetett ingatlanok adatait is, az ingatlanról feltöltött képpel együtt.
 
+A weboldal megvalósítása során fontos szempont, hogy könnyen üzemeltethető legyen, ugyanakkor ügyfeleink is könnyen elérjék, platformfüggetlen legyen, reszponzív felülettel rendelkezzen. A weboldal felépítése során fontos a könnyű áttekinthetőség.
+
+Cégünk a jövőben lehetőséget szeretne biztosítani arra, hogy hirdetők közvetlenül a weboldalon keresztül hirdethessenek, ezért A weboldalon lehetőséget kell biztosítani új hirdetők regisztrációjára, valamint a meghirdetni kívánt ingatlanadatok rögzítésére. 
 
 #### Követelménylista
 
@@ -73,7 +77,7 @@ oldal admin felületére belép -> felhasználók jogosultsági körét módosí
 
 #### Képernyőtervek
 
-Készítettem xd file-t az Adobe XD alkalmazással. A fájl elérhető a dokumentumokban.
+![56](C:\Users\Telegdi Tamás\Desktop\56.png)
 
 Belépés nélkül is meg kell jelennie az oldal valamennyi funkciójának, de annak használatát regisztrációhoz kell kötni. Tehát a belépett és regisztráció nélküli oldal között látszólag nincs különbség.
 
@@ -93,10 +97,19 @@ Az oldal alsó részén pedig az ingatlanpiaccal kapcsolatos hírek jelennek meg
 
 #### Forgatókönyvek
 
-A felhasználó a főoldalon egy keresővel találkozik, ahol néhány alapdolog megadásával lekérdezhet egy listát az általa preferált ingatlanokról. A kereső alatt a legnépszerűbb házak listáját lehet megtekinteni. A kereső részt regisztráció nélkül lehet használni.
+A felhasználó szeretne egy ingatlanhirdetést közzéteni:
 
-A felső navigációs sávban található egy Főoldal, egy Belépés, egy Regisztráció és egy Rólunk menüpont. A Regisztációra kattintva egy űrlap jelenik meg, amelynek értelemszerű kitöltése után a felhasználó egy megerősítő emailt kap a megadott címére. Az ebben található linkre kattintva máris bejelentkezhet az oldalra. Regisztrációnál kötelező megadni egy nevet, egy email címet és egy jelszót, továbbá opcionálisan választható a hírlevélre feliratkozás.
+- felkeresi a weboldalt egy böngészőn keresztül
+- a Főoldalon a felső menüsávban a Bejelentkezés gombra kattint
+- a megjelenő lapon az email címe és a jelszava megadásával bejelentkezik a weboldalra
+- ismét a Főoldal jelenik meg, ahol a felső menüsávban a Saját hirdetéseim lenyíló menüből az Új hirdetés feladása lehetőséget választja
+- megjelenik az erre szolgáló lap, ahol az ingatlan számos jellemzőjét adhatja meg, egyesek kötelezőek, mások opcionálisak, továbbá képet is feltölthet az ingatlanról
+- ezek befejeztével, a Jóváhagyás gombra kattintva, elküldi igényét a rendszer felé
+- ha minden adat rendben van, akkor az ingatlan bekerül az adatbázisba, és a weboldal be is tölti az ingatlan adatlapját a felhasználónak
 
-A Belépés pontra kattintva az email cím és a jelszó megadásával jelentkezhet be a regisztrált felhasználó. Sikeres bejelentkezés után megjelenik a felhasználónév a navigációs sáv szélén, arra rákattintva pedig szerkeszthetők a személyes adatok. Megjelenik továbbá egy Saját hirdetéseim menüpont is, ahol saját ingatlanokat hirdethetünk meg, illetve meglévő hirdetéseinket szerkeszthetjük. Hirdetésfeladásnál vannak kötelezően kitöltendő mezők (pl. település, alapterület, szobák száma,) és opcionálisan megadható jellemzők (pl. erkély, légkondicionáló, parkolás). Ezen kívül lehetőség van még fotók feltöltésére is.
+Érdeklődés egy ingatlan iránt:
 
-A Rólunk menüpont alatt egy pár soros bemutatkozást olvashatunk az ingatlanos cégtől, alant pedig a munkatársak fotóit és az elérhetőségeket tekinthetjük meg.
+- az odalra tévedt látogató a Főoldalon egy egyszerűsített keresőt talál, melynek segítségével leszűkíti a keresett ingatlanok körét
+- a weboldal a megadott szűrők alapján lekérdezést hajt végre az adatbázis felé, majd az eredményeket megjeleníti egy lapon a látogatónak
+- látogató rákattint egy szimpatikus ingatlan képére, mire betöltődik annak részletes adatlapja
+- amennyiben a látogatót komolyan érdekli az ingatlan, az adatlapról leolvashatja az ingatlanhoz tartozó ingatlanos elérhetőségeit, és azokon keresztül felveheti vele a kapcsolatot
