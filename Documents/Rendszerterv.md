@@ -16,7 +16,30 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 
 ### 3. Üzleti folyamatok modellje
 
+##### 	3.1 Üzleti szereplők
 
+​		Látogató: Szabadon böngészheti az ingatlanhirdetéseket, szűréseket végezhet a keresővel,                                          		kinagyíthatja a fotókat, elolvashatja a Rólunk szekciót, valamint regisztrálhat.
+
+​		Tag: A fentebb felsoroltakon kívül elmenthet magának hirdetéseket, továbbá saját hirdetéseket tehet 		közzé egy külön lapon, mely csak a bejelentkezés után válik láthatóvá. Saját hirdetéseit bármikor                                                		módosíthatja vagy törölheti.
+
+​		Ingatlanos: A fentebb felsoroltakon kívül bárkinek a hirdetését módosíthatja vagy törölheti.
+
+​		Admin: A fentebb felsoroltakon kívül *ingatlanos* vagy *admin* jogosultsági körrel ruházhat fel 		 			      		felhasználókat, valamint el is veheti ezeket a jogokat, és bármikor törölheti bárkinek az accountját. A 		weboldal szerkesztéséhez is kizárólagos joga van.
+
+##### 	3.2 Üzleti folyamatok
+
+		- Ingatlanok böngészése
+		- Regisztráció
+		- Tag adatainak megváltoztatása
+		- Saját hirdetés feladása
+		- Saját hirdetés módosítása/törlése
+		- Bármely hirdetés módosítása/törlése
+
+##### 	3.3 Üzleti entitások
+
+		- ingatlan
+		- ingatlanos
+		- eladó
 
 ### 4. Követelmények
 
@@ -28,7 +51,7 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 
 ### 6. Fizikai környezet
 
-
+TT
 
 ### 7. Absztrakt domain modell
 
@@ -44,7 +67,7 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 
 ### 10. Implementációs terv
 
-
+TT
 
 ### 11. Tesztterv
 
@@ -52,6 +75,8 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 
 ### 12. Telepítési terv
 
-
+TT
 
 ### 13. Karbantartási terv
+
+TT
