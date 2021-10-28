@@ -16,7 +16,7 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 
 ### 3. Üzleti folyamatok modellje
 
-##### 			3.1 Üzleti szereplők
+#### 			3.1 Üzleti szereplők
 
 ​		Látogató: Szabadon böngészheti az ingatlanhirdetéseket, szűréseket végezhet a keresővel,                                          		kinagyíthatja a fotókat, elolvashatja a Rólunk szekciót, valamint regisztrálhat.
 
@@ -26,7 +26,7 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 
 ​		Admin: A fentebb felsoroltakon kívül *ingatlanos* vagy *admin* jogosultsági körrel ruházhat fel 		 			      		felhasználókat, valamint el is veheti ezeket a jogokat, és bármikor törölheti bárkinek az accountját. A 		weboldal szerkesztéséhez is kizárólagos joga van.
 
-##### 			3.2 Üzleti folyamatok
+#### 			3.2 Üzleti folyamatok
 
 - Ingatlanok böngészése
 
@@ -52,7 +52,7 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 
   Ez a lehetőség kizárólag ingatlanos és admin jogosultsággal érhető el. Bármely ingatlan adatlapjára navigálva az említett felhasználók találnak egy Adatlap szerkesztése gombot, melyre rákattintva a fentebb részletezett módon végezhető el az adatok módosítása vagy a hirdetés törlése.
 
-##### 			3.3 Üzleti entitások
+#### 			3.3 Üzleti entitások
 
 - ingatlan
 - ingatlanos
@@ -68,7 +68,19 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 
 ### 6. Fizikai környezet
 
-TT
+- Hardver és hálózati topológia
+  - Az alkalmazás web platformra készül
+  - Interneten keresztül bárki elérheti a weboldalt egy böngészőn keresztül
+  - Szerver-kliens topológia
+- Fizikai alrendszerek
+  - Webszerver: 80-as porton elérhető HTTP szolgáltatás
+  - MySQL adatbázis szerver
+  - Kliens gép: internethozzáféréssel, megfelelő böngészővel és kellő hardverrel rendelkező eszköz
+- Fejlesztői eszközök
+  - Typora
+  - Visual Studio Code
+  - MySQL Workbench
+  - XAMPP (Apache webszerver)
 
 ### 7. Absztrakt domain modell
 
