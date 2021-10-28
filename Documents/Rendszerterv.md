@@ -96,7 +96,7 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 
 ### 10. Implementációs terv
 
-TT
+A webszerveren futó PHP kód valósítja meg az üzleti logikát, az ebbe integrált HTML pedig a kliens oldalon megjelenő felhasználói felületért felel. Külön CSS és Javascript fájl gondoskodik a dizájnról és az oldal bizonyos funkcióiról. Az adatbázis elérését a PHP kódba integrált REST szolgáltatások valósítják meg.
 
 ### 11. Tesztterv
 
@@ -104,8 +104,12 @@ TT
 
 ### 12. Telepítési terv
 
-TT
+Szerver oldalon szükség lesz egy Apache/PHP/MySQL hármast támogató tárhelyre. Ennek birtokában FTP kapcsolaton keresztül feltölthetők a weboldalhoz tartozó fájlok.
+
+Kliens oldalon mindössze egy modern böngésző telepítése szükségeltetik egy kellőképpen erős, és megfelelő interneteléréssel rendelkező eszközre.
 
 ### 13. Karbantartási terv
 
-TT
+A karbantartás magába foglalja a weboldalon tapasztalt hibák kijavítását és az esetleges megváltozott megrendelői igények kielégítését. A hibák kijavítása preferenciát élvez, az új igények implementálása viszont a feladat nagyságától, illetve az aktuális szabad kapacitástól függően több hetet is igénybe vehet.
+
+Ide tartozik még az adatbázis szerver felügyelete, egyrészt az adatok védelme érdekében, másrészt a túlterhelés azonnali észlelése végett. Ügyelni kell tehát a szerver folyamatos monitorozására.
