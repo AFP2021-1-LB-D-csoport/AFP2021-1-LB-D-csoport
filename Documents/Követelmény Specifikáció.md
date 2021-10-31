@@ -12,11 +12,17 @@ A cég nem rendelkezik weboldallal, csak egy kis bérelt irodával egy kevésbé
 
 #### **Vágyálomrendszer**
 
-A vállalkozás bővítése érdekében létre szeretnénk hozni egy weboldalt, ahol ügyfeleinknek lehetősége nyílik megtekinteni a nyilvántartásunkban szereplő ingatlanokat. A weboldal a cégünk által közvetített ingatlanok adatait nyilvántartó adatbázishoz kapcsolódik, mely adatbázis a cég adminisztrációját is támogatná, segítségével az üzlet fejlesztését, teljesítményét mérő riportokat készíthetnénk el. A nyilvántartás online kezelésével nem csak a cégvezetés, de a vevők is naprakész információhoz juthatnak a közvetített ingatlanokról. Az adatbázisnak emiatt tárolnia kell a cég működéséhez szükséges adatokat (például: munkatársak adatai), valamint a meghirdetett ingatlanok adatait is, az ingatlanról feltöltött képpel együtt.
+A vállalkozás bővítése érdekében létre szeretnénk hozni egy weboldalt, ahol ügyfeleinknek lehetősége nyílik megtekinteni a nyilvántartásunkban szereplő ingatlanokat.
+
+######  **Adatbázis**
+
+A weboldal a cégünk által közvetített ingatlanok adatait nyilvántartó adatbázishoz kapcsolódik, mely adatbázis a cég adminisztrációját is támogatná, segítségével az üzlet fejlesztését, teljesítményét mérő riportokat készíthetnénk el. A nyilvántartás online kezelésével nem csak a cégvezetés, de a vevők is naprakész információhoz juthatnak a közvetített ingatlanokról. Az adatbázisnak emiatt tárolnia kell a cég működéséhez szükséges adatokat (például: munkatársak adatai), valamint a meghirdetett ingatlanok adatait is, az ingatlanról feltöltött képpel együtt.
+
+######  **Webes felület**
 
 A weboldal megvalósítása során fontos szempont, hogy könnyen üzemeltethető legyen, ugyanakkor ügyfeleink is könnyen elérjék, platformfüggetlen legyen, reszponzív felülettel rendelkezzen. A weboldal felépítése során fontos a könnyű áttekinthetőség.
 
-Cégünk a jövőben lehetőséget szeretne biztosítani arra, hogy hirdetők közvetlenül a weboldalon keresztül hirdethessenek, ezért A weboldalon lehetőséget kell biztosítani új hirdetők regisztrációjára, valamint a meghirdetni kívánt ingatlanadatok rögzítésére. 
+Cégünk a jövőben lehetőséget szeretne biztosítani arra, hogy hirdetők közvetlenül a weboldalon keresztül hirdethessenek, ezért a weboldalon lehetőséget kell biztosítani új hirdetők regisztrációjára, valamint a meghirdetni kívánt ingatlanadatok rögzítésére. 
 
 #### **A rendszerre vonatkozó szabályok**
 
