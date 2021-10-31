@@ -20,13 +20,13 @@ Cégünk a jövőben lehetőséget szeretne biztosítani arra, hogy hirdetők k�
 
 #### **A rendszerre vonatkozó szabályok**
 
-Regisztrált ügyfeleink adatait a hatályos adatvédelmi előírások, a GDPR szabályzat alapján vagyunk kötelesek tárolni.
+Regisztrált ügyfeleink adatait a hatályos adatvédelmi előírások, a GDPR szabályzat alapján vagyunk kötelesek tárolni. Az elkészült honlapon szükséges megjeleníteni az Adatkezelési hozzájáruló nyilatkozatot.
 
 Az ingatlanközvetítői tevékenységet a 1993. évi LXXVIII. törvény a lakások és helyiségek bérletére, valamint az elidegenítésükre vonatkozó egyes szabályokról (Lakástörvény) c. jogszabály szabályozza, melynek rendelkezéseit cégünknek maradéktalanul be kell tartania.
 
 A weboldal fejlesztése PHP, HTML, CSS, JavaScript alapokon történjen, a képek tárolási formátuma jpeg, png.
 
-Az adatbázis MySQL alapokon készüljön.
+Az adatok tárolása relációs adatbázisban történjen, az adatok kezelése, tárolása SQL alapon történjen.
 
 #### **Jelenlegi üzleti folyamatok modellje**
 
