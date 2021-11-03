@@ -64,7 +64,8 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 
 ### 5. Funkcionális terv
 
-![](C:\Users\Viktor\Documents\GitHub\AFP2021-1-LB-D-csoport\Documents\Funckionális terv képek\felhasználó törlése.bmp)
+![Új felhasználó regisztrálása](https://user-images.githubusercontent.com/85190682/140087790-d90ae4ae-7918-465e-b640-c00a53b16d10.jpg)
+
 
 ### 6. Fizikai környezet
 
