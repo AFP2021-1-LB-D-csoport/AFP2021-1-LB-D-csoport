@@ -64,7 +64,7 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 
 ### 5. Funkcionális terv
 
-![](C:\Users\Viktor\Desktop\ingatlan törlése.jpg)
+![Keresés1](C:\Users\Viktor\Desktop\Keresés1.jpg)
 
 ### 6. Fizikai környezet
 
