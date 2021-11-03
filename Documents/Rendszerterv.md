@@ -64,7 +64,7 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 
 ### 5. Funkcionális terv
 
-![Keresés1](C:\Users\Viktor\Desktop\Keresés1.jpg)
+![](C:\Users\Viktor\Documents\GitHub\AFP2021-1-LB-D-csoport\Documents\Funckionális terv képek\felhasználó törlése.bmp)
 
 ### 6. Fizikai környezet
 
