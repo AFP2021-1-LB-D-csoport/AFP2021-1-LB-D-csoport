@@ -64,6 +64,8 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 
 ### 5. Funkcionális terv
 
+A rendszerünkben két csoportot különböztetünk meg. Az egyik csoport az ügyfelek, akik ingatlant szeretnének vásárolni vagy eladni, esetleg képben lenni a piacon történő változásokkal, helyzetekkel. Másik nagy csoport az ingatlanokat kezelő munkatársak, akik ebben segítséget nyújtanak az ügyfeleknek. Értelemszerűen az utóbbi csoport nagyobb fehasználó jogosultságokkal rendelkezik, például felülbírálhatja az ügyfél által feltöltött ingatlan adatait, illetve törölheti akár az ügyfelet vagy ingatlant is. 
+
 Rendszerhasználati esetek és lefutásaik
 
 ![Új felhasználó regisztrálása](https://user-images.githubusercontent.com/85190682/140087790-d90ae4ae-7918-465e-b640-c00a53b16d10.jpg)
