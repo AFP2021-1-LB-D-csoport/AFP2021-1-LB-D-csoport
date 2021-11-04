@@ -63,13 +63,21 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 #### 4.1 Funkcionális követelmények
 
 - A felhasználó bejelentkezés nélkül képes használni az oldal bizonyos funkcióit. Tehát a keresést, részletes keresését, az oldal tulajdonosairól szóló "rólunk" részét, a regisztrációs menüt és a bejelentkezési menüt. Ezeknek megfelelően szükséges az oldalon történő navigálást és megjelenést kezelni. 
+
   A keresés és a részletes keresés során az oldal az adatbázisban tárolt adatokat tárolt eljárások és lekérdezések segítségével szűrve kapja meg. Így a felhasználó a teljes adatbázisban vagy az adatbázis egy részhalmazában képes keresni.
+
   A regisztrációnál és a bejelentkezésnél az oldal szintén adatbáziskapcsolatot használ a felhasználó azonosítására vagy a felhasználói fiók létrehozására. Minden felhasználó számára egyedi azonosító(id) generálódik, amely alapján a felhasználó később azonosításra kerül. Mind a regisztráció és a bejelentkezés esetében az adatokat ellenőrizve továbbítja az oldal az adatbázis felé, ezzel elkerülve az esetleges hibák előfordulását. 
+
 - A bejelentkezett felhasználó számára az oldalon megjelennek az új funkciók. Ilyen a felhasználói fiók szerkesztése, új hirdetés feladása, hirdetések szerkesztése, törlése, aktiválása/deaktiválása.
+
   A felhasználói fiók szerkesztésekor az adatbázisban a felhasználót leíró adatokat lehet megváltoztatni. Ehhez a megváltoztatni kívánt adatokat szükséges megadni. A bevitt adatok ellenőrzésre kerülnek, ezután az adatbázissal kerül kiépítésre a kapcsolat és a megadott adatok az adatbázisban is megváltoztatásra kerülnek.
+
   Új hirdetés feladásakor az adatbázisban egy új rekord kerül rögzítésre, amelynél egyedi azonosító(id) generálódik a hirdetés azonosítása érdekében, és a felhasználó által megadott adatok az adatbázisban rögzítésre kerülnek.
+
   A hirdetés szerkesztésekor, törlésekor, aktiválásakor/deaktiválásakor először az adatbáziskapcsolat megtörténik és a felhasználó azonosítója alapján megjelennek az általa feladott hirdetések. Ezután van lehetőség szerkeszteni, törölni, deaktiválni. 
+
   A törlés és a aktiválás/deaktiválás egy gomb segítségével történik, amelyre rákattintva a hirdetés véglegesen törlésre kerül az adatbázisból vagy a rekord aktív mezőjének értéke változik meg.
+
   A hirdetés szerkesztése során az oldal az adatokat ellenőrzötten továbbítja az adatbázis számára, ahol a rekord megadott adatai változnak meg. 
 
 ### 5. Funkcionális terv
