@@ -64,8 +64,13 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 
 ### 5. Funkcionális terv
 
-![Új felhasználó regisztrálása](https://user-images.githubusercontent.com/85190682/140087790-d90ae4ae-7918-465e-b640-c00a53b16d10.jpg)
+Rendszerhasználati esetek és lefutásaik
 
+![Új felhasználó regisztrálása](https://user-images.githubusercontent.com/85190682/140087790-d90ae4ae-7918-465e-b640-c00a53b16d10.jpg)
+![Új ingatlan hozzáadása](https://user-images.githubusercontent.com/85190682/140299716-58216d86-0968-4fba-8301-49c41b862e16.jpg)
+![felhasználó törlése](https://user-images.githubusercontent.com/85190682/140299917-564ae66d-83b3-466b-9ee4-de422925c225.jpg)
+![ingatlan törlése](https://user-images.githubusercontent.com/85190682/140299960-950a32e4-b3b2-4493-bd03-48cb563a3f97.jpg)
+![Keresés1](https://user-images.githubusercontent.com/85190682/140299989-5f71b059-37d4-4a6d-be04-aea91f1d99d7.jpg)
 
 ### 6. Fizikai környezet
 
