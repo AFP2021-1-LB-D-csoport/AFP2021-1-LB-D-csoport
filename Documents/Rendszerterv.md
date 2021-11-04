@@ -80,6 +80,24 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 
   A hirdetés szerkesztése során az oldal az adatokat ellenőrzötten továbbítja az adatbázis számára, ahol a rekord megadott adatai változnak meg. 
 
+  
+
+#### 4.2 Nem funkcionális követelmények 
+
+- **Termék követelmények**
+  - Az oldal a kéréseket adatbáziskapcsolat kiépítésétől függetlenül 1000ms-on belül képes végrehajtani
+  - Az adatbázisban a felhasználó csak a saját adatait és a hirdetéseinek adatait képes megváltoztatni.
+  - Az adatbázissal történő kommunikáció, amennyiben lehetséges tárolt eljárásokon keresztül történjen.
+  - A szoftver mérete nem haladja meg az 1GB-ot.
+  - Az oldal könnyen átlátható, használható minimális informatikai tudással rendelkező felhasználóknak is.
+- **Szervezeti követelmények**
+  - A szoftver a szerződésben meghatározott időpontig, az előzetesen meghatározott követelményeknek megfelelő állapotban átadásra kerül. Ellenkező esetben a szerződésben feltüntetett kötbér megfizetése terheli a fejlesztő céget.
+  - A program az előzetesen meghatározott rendszereken használható és a megadott gépekre telepítésre kerül.
+- **Külső követelmények**
+  - A szoftverfejlesztő cég szakemberei és a megrendelő a kapcsolattartást az előzetesen meghatározott gyakorisággal folytatja. Amennyiben a fejlesztés előrehaladása érdekében szükséges további konzultáció, azt időpontegyeztetés után szükséges beiktatni.
+  - A felhasználók nem szerezhetnek tudomást a többi felhasználó adatairól.
+  - A szoftverfejlesztő cég munkatársainak a jóváhagyott etikai kódex alapján kell viselkedniük.
+
 ### 5. Funkcionális terv
 
 A rendszerünkben két csoportot különböztetünk meg. Az egyik csoport az ügyfelek, akik ingatlant szeretnének vásárolni vagy eladni, esetleg képben lenni a piacon történő változásokkal, helyzetekkel. Másik nagy csoport az ingatlanokat kezelő munkatársak, akik ebben segítséget nyújtanak az ügyfeleknek. Értelemszerűen az utóbbi csoport nagyobb fehasználó jogosultságokkal rendelkezik, például felülbírálhatja az ügyfél által feltöltött ingatlan adatait, illetve törölheti akár az ügyfelet vagy ingatlant is. 
