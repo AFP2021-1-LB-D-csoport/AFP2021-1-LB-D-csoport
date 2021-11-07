@@ -14,6 +14,14 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 
 ####    2.1 Projekt szerepkörök
 
+|Szerepkör|Név|Feladatok|
+|:----------------------------:|:---------------------------------------------:|--------------------------------------------------------------------------|
+|Projektvezető|Kormány Milán|projekt irányítása, határidők felügyelete, projekt haladásának biztosítása|
+|Projekt munkatárs|Letső Dániel|dokumentáció készítése, programozás, tesztelés|
+|Projekt munkatárs|Nyíri Tímea|dokumentáció készítése, programozás, tesztelés|
+|Projekt munkatárs|Safarcsik Viktor|dokumentáció készítése, programozás, tesztelés|
+|Projekt munkatárs|Telegdi Tamás|dokumentáció készítése, programozás, tesztelés|
+
 ####    2.2 Ütemterv
 
 ####    2.3 Projekt mérföldkövek
