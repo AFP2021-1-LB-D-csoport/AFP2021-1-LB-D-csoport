@@ -12,7 +12,11 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 
 ### 2. Projektterv
 
+####    2.1 Projekt szerepkörök
 
+####    2.2 Ütemterv
+
+####    2.3 Projekt mérföldkövek
 
 ### 3. Üzleti folyamatok modellje
 
