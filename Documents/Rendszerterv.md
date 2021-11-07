@@ -26,7 +26,11 @@ A projektet a senior projektvezető fogja össze, a projektben további 4 szemé
 
 ####    2.2 Ütemterv
 
-A szükségletek felmérése és a projekt dokumentáció elkészítése a projekt első 
+A szükségletek felmérése és a projekt dokumentáció elkészítése a projekt első nagy fázisa, mely szintén két nagyobb egységre bontható: a Funkcionális specifikáció és a Rendszerterv elkészítésére. Ezen dokumentumok elkészítését követi a programozás fázis, majd a tesztelés, hibajavítás. A dokumentációkészítés nem zárul le véglegesen a Rendszertervvel, hanem a projekt egészét végigkíséri.
+
+A projekt időbeli előrehaladását az alábbi Gantt-diagramm szemlélteti:
+
+![gantt](https://user-images.githubusercontent.com/85219194/140652529-740f2e39-1bf4-4f28-9a53-9b2325b76771.JPG)
 
 ####    2.3 Projekt mérföldkövek
 
