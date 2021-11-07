@@ -34,6 +34,11 @@ A projekt időbeli előrehaladását az alábbi Gantt-diagramm szemlélteti:
 
 ####    2.3 Projekt mérföldkövek
 
+I.    Projekt kezdeti dokumentáció elkészítése - Funkcionális specifikáció, Rendszerterv
+II.   Rendszertervnek megfelelő programozási feladatok
+III.  Elkészült fejlesztés teszetelés, hibajavítás
+IV.   Projekt lezárása
+
 ### 3. Üzleti folyamatok modellje
 
 #### 			3.1 Üzleti szereplők
