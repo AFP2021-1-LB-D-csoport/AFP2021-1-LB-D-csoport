@@ -14,6 +14,8 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 
 ####    2.1 Projekt szerepkörök
 
+A projektet a senior projektvezető fogja össze, a projektben további 4 személy dolgozik. A projekten dolgozó személyek a feladatokat rendszeresen online megbeszélések keretében osztják fel egymás között, a projekt előrehaladását Kanban módszerrel követjük nyomon (Trello). A projektben dolgozó emberek egyformán felelősek a feladatkörükhöz tartozó dokumentáció elkészítéséért és a programozási feladatok helyes elvégézésért is. A projektben részt vevő személyek pontos listája az alábbi:
+
 |Szerepkör|Név|Feladatok|
 |:----------------------------:|:---------------------------------------------:|--------------------------------------------------------------------------|
 |Projektvezető|Kormány Milán|projekt irányítása, határidők felügyelete, projekt haladásának biztosítása|
@@ -23,6 +25,8 @@ Az oldalnak nem célja felhasználói profilokat létrehozni, minden felhasznál
 |Projekt munkatárs|Telegdi Tamás|dokumentáció készítése, programozás, tesztelés|
 
 ####    2.2 Ütemterv
+
+A szükségletek felmérése és a projekt dokumentáció elkészítése a projekt első 
 
 ####    2.3 Projekt mérföldkövek
 
