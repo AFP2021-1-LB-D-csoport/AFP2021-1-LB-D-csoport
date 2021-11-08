@@ -172,6 +172,9 @@ A webszerveren futó PHP kód valósítja meg az üzleti logikát, az ebbe integ
 
 ### 11. Tesztterv
 
+A tesztelés eredményeit a tesztjegyzőkönyvben szükséges dokumentálni minden tesztesethez kapcsolódóan külön. A tesztjegyzőkönyv sablonja a Rendszerterv mellékletei közül tölthető le.
+
+![image](https://user-images.githubusercontent.com/85219194/140758053-a242a1e4-5a8b-4bbd-94c5-31ee5aa3607b.png)
 
 ### 12. Telepítési terv
 
