@@ -153,7 +153,10 @@ Rendszerhasználati esetek és lefutásaik
 
 ### 7. Absztrakt domain modell
 
-![domain model](https://user-images.githubusercontent.com/85219194/140752175-5c2a720e-a5f2-46d5-b39a-d90f5fcba738.JPG)
+A domain modell a projekt scopejába tartozó feladatokat, eseményeket foglalja össze egyszerű, követhető formában. A projekt során létrehozandó adatbázisnak szükséges tárolnia az ingatlanközvetítőnél dolgozó munkatársak adatait. A projektben létrehozandó weboldalon lehetőség van a regisztrált felhasználóknak új hirdetést feladni, a hirdetéshez minden esetben az ingatlanközvetítő iroda egyik saját munkatársát fogja rendelni. A hirdetésekben kötelező megadni az ingatlan egyes tulajdonságait, míg más tulajdonságok megadása opcionális. A regsiztrált felhasználók böngészhetik a feladott hirdetéseket és kapcsolatba léphetnek a hirdetéshez tartozó ingatlanossal további egyeztetés céljából.
+
+![domain model v2](https://user-images.githubusercontent.com/85219194/140760457-70fbff6b-8f4e-492f-9a9c-6013ec4ac46b.JPG)
+
 
 ### 8. Architekturális terv
 
