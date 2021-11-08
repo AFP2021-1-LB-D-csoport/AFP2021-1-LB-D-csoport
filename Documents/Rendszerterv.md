@@ -153,7 +153,9 @@ Rendszerhasználati esetek és lefutásaik
 
 ### 7. Absztrakt domain modell
 
-A domain modell a projekt scopejába tartozó feladatokat, eseményeket foglalja össze egyszerű, követhető formában. A projekt során létrehozandó adatbázisnak szükséges tárolnia az ingatlanközvetítőnél dolgozó munkatársak adatait. A projektben létrehozandó weboldalon lehetőség van a regisztrált felhasználóknak új hirdetést feladni, a hirdetéshez minden esetben az ingatlanközvetítő iroda egyik saját munkatársát fogja rendelni. A hirdetésekben kötelező megadni az ingatlan egyes tulajdonságait, míg más tulajdonságok megadása opcionális. A regsiztrált felhasználók böngészhetik a feladott hirdetéseket és kapcsolatba léphetnek a hirdetéshez tartozó ingatlanossal további egyeztetés céljából.
+A domain modell a projekt scopejába tartozó feladatokat, eseményeket foglalja össze egyszerű, követhető formában. 
+
+A projekt során létrehozandó adatbázisnak szükséges tárolnia az ingatlanközvetítőnél dolgozó munkatársak adatait. A projektben létrehozandó weboldalon lehetőség van a regisztrált felhasználóknak új hirdetést feladni, a hirdetéshez minden esetben az ingatlanközvetítő iroda egyik saját munkatársát fogja rendelni. A hirdetésekben kötelező megadni az ingatlan egyes tulajdonságait, míg más tulajdonságok megadása opcionális. A regsiztrált felhasználók böngészhetik a feladott hirdetéseket és kapcsolatba léphetnek a hirdetéshez tartozó ingatlanossal további egyeztetés céljából.
 
 ![domain model v2](https://user-images.githubusercontent.com/85219194/140760457-70fbff6b-8f4e-492f-9a9c-6013ec4ac46b.JPG)
 
@@ -164,7 +166,7 @@ A domain modell a projekt scopejába tartozó feladatokat, eseményeket foglalja
 
 ### 9. Adatbázisterv
 
-A relációs adatmodell a csillagséma szabályai szerint került kialakításra.
+A relációs adatmodell a csillagséma szabályai szerint került kialakításra. Az adatbázis modellt nagyobb felbontásban a Rendszerterv mellékleteiként feltöltött fájlban lehet megtekinteni.
 
 ![DATABASE_MODELL_V4](https://user-images.githubusercontent.com/85219194/140757623-0b479b3c-7d5b-4b2d-956a-9d49ae3a5585.JPG)
 
@@ -175,9 +177,44 @@ A webszerveren futó PHP kód valósítja meg az üzleti logikát, az ebbe integ
 
 ### 11. Tesztterv
 
-A tesztelés eredményeit a tesztjegyzőkönyvben szükséges dokumentálni minden tesztesethez kapcsolódóan külön. A tesztjegyzőkönyv sablonja a Rendszerterv mellékletei közül tölthető le.
+A tesztelés során törekszünk a Funkcionális Specifikációban elfogadott követelménylista alapján összeállítani a teszteseteket, és a meghatározott követlemények tesztelését a lehet legteljeskörűbben igyekszünk lefedni. 
+
+A tesztelést a fejlesztésben is részt vevő projektmunkatársak végzik.A tesztelés eredményeit a tesztjegyzőkönyvben szükséges dokumentálni minden tesztesethez kapcsolódóan külön. A tesztjegyzőkönyv sablonja a Rendszerterv mellékletei közül tölthető le.
 
 ![image](https://user-images.githubusercontent.com/85219194/140758053-a242a1e4-5a8b-4bbd-94c5-31ee5aa3607b.png)
+
+A tesztelés a fejlesztés során is használt környezeten történik. XAMPP (Apache webszerver). A fejlesztői teszteket a programozás során a programozó automatikusan elvégzi, erről külön tesztjegyzőkönyv készítésére nincs szükség. A prototípus teszteket, integrációs teszteket a projektmunkatársak a megadott feladatleosztás szerint végzik el, és az eredményt minden esetben dokumentálják a megadott tesztejegyzőkönv sablon kitöltésével.
+
+#### 11.1. Tesztesetek a megadott követelménylista alapján
+
+| Teszteset száma | Teszteset leírása | Elvárt eredmény |
+|:---------------:|:-----------------:|-----------------|
+|1.1.|Navigálás az oldal menüpontjai között|Minden menüpont a helyes aloldara mutasson, a navigáció során hibaüzenet ne jelenjen meg|
+|1.2.|Halvány, kellemes színek a weboldalon|A megrendelő által elvárt kinézete legyen az oldalnak|
+|1.3.|Ingatlan hirdetések lista nézetben|A hirdetések lista nézetben, egymás alatt, görgethetően jelenjenek meg|
+|2.1.|A hirdetések adatai relációs adatbázisban legyenek tárolva|A Rendszertervben megadott adatmodellben kerüljenek tárolásra az adatok|
+|2.2.|A hirdetések adatai relációs adatbázisban legyenek tárolva - új hirdetés|Új hirdetések adatai beíródjanak az adattáblákba|
+|3.1.|Papír alapú nyilvántartás átkerüljön az adatbázisba|Őstöltéssel kerüljenek be az ingatlaniroda adatai a relációs adattáblákba|
+|4.1.|Regisztráció - sikeres|Új felhasználó létrehozása helyes adatokkal sikeres legyen|
+|4.2.|Regisztráció - sikertelen|Új felhasználó létrehozása helytelen/hiányos adatokkal hibaüzenetre fusson|
+|5.1.|Profilba belépés - sikeres|Helyesen megadott bejelentkezési adatok után sikeresen be lehessen lépni a saját Profil oldalra|
+|5.2.|Profilba belépés - sikertelen|Helytelen felhasználónév esetén hibaüzenetet adjon|
+|5.3.|Profilba belépés - sikertelen|Helytelen jelszó esetén hibaüzenetet adjon|
+|6.1.|Hirdetés feladása - kötelezően töltendő adatok|A kötelezően töltendő adatokkal együtt fogadja csak el a hirdetésfeladást|
+|6.2.|Hirdetés feladása - képfeltöltés|Képfeltöltés és képaláírás megfelelően megjelenjen a hirdetés oldalán|
+|7.1.|Saját hirdetés törlése |Saját profilon belül lehessen törölni a hirdetést, utána ne lehessen ezt visszaállítani|
+|7.2.|Saját hirdetés inaktiválása |Saját profilon belül lehessen inaktiválni a hirdetést, utána vissza lehessen ezt állítani|
+|8.1.|Aktív hirdetések keresése|Aktív hirdetések között a kereső felhozza a keresési feltételeknek megfelelő hirdetéseket|
+|8.2.|Aktív hirdetések keresése - sikertelen |Ha nincs a keresési feltételeknek megfelelő hirdetés, akkor hibaüzenetet hozzon fel az oldal|
+|9.1.|Hirdetés részleteinek megtekintése|A hirdetés listában egy hirdetésre kattintva új oldalon megjelenjen a hirdetés részletei|
+|9.2.|Hirdetés részleteinek megtekintése - képek|A hirdetés listában egy hirdetésre kattintva új oldalon megjelenjen a hirdetés részletei, a képek megfelelően megjelenítve|
+|10.1.|Hirdetés feladása - sikertelen|Helytelen, hiányos feltöltést ne fogadjon el az oldal|
+
+#### 11.2. Egyéb teszteseket
+
+11.1. Terheléses teszt
+11.2. Biztonsági teszt a szenzitív adatok tárolására
+
 
 ### 12. Telepítési terv
 
