@@ -161,6 +161,9 @@ Rendszerhasználati esetek és lefutásaik
 
 ### 9. Adatbázisterv
 
+A relációs adatmodell a csillagséma szabályai szerint került kialakításra.
+
+![DATABASE_MODELL_V4](https://user-images.githubusercontent.com/85219194/140757623-0b479b3c-7d5b-4b2d-956a-9d49ae3a5585.JPG)
 
 
 ### 10. Implementációs terv
@@ -168,7 +171,6 @@ Rendszerhasználati esetek és lefutásaik
 A webszerveren futó PHP kód valósítja meg az üzleti logikát, az ebbe integrált HTML pedig a kliens oldalon megjelenő felhasználói felületért felel. Külön CSS és Javascript fájl gondoskodik a dizájnról és az oldal bizonyos funkcióiról. Az adatbázis elérését a PHP kódba integrált REST szolgáltatások valósítják meg.
 
 ### 11. Tesztterv
-
 
 
 ### 12. Telepítési terv
