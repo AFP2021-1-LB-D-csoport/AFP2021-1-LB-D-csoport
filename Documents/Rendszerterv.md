@@ -212,8 +212,8 @@ A tesztelés a fejlesztés során is használt környezeten történik. XAMPP (A
 
 #### 11.2. Egyéb teszteseket
 
-11.1. Terheléses teszt
-11.2. Biztonsági teszt a szenzitív adatok tárolására
+- 11.1. Terheléses teszt
+- 11.2. Biztonsági teszt a szenzitív adatok tárolására
 
 
 ### 12. Telepítési terv
