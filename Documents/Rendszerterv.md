@@ -153,7 +153,7 @@ Rendszerhasználati esetek és lefutásaik
 
 ### 7. Absztrakt domain modell
 
-
+![domain model](https://user-images.githubusercontent.com/85219194/140752175-5c2a720e-a5f2-46d5-b39a-d90f5fcba738.JPG)
 
 ### 8. Architekturális terv
 
