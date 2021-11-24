@@ -8,6 +8,7 @@ define('UTILS_DIR', './private/utils/');
 define('USERS_DIR', './private/pages/users/');
 define('REAL_ESTATES_DIR', './private/pages/real-estates/');
 define('BASE_URL', 'http://localhost/AFP2021-1-LB-D-csoport/htdocs/index.php');
+define('IMG_DIR', './public/img/');
 
 define('DB_TYPE', 'mysql');
 define('DB_NAME', 'dbuser');

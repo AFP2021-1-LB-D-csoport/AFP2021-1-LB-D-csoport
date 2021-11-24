@@ -1,2 +1,3 @@
-<h1>Na, ide valami csili-vili fejlécet kell alkotni, addig meg beérjük ezzel a szöveggel.</h1>
+<img src="./public/img/haziko.png" alt="Házikó" style="width:70px;height:70px;">
+<h1>Letső, Nyíri, Safarcsik & Telegdi Real Estate</h1>
 </br>
