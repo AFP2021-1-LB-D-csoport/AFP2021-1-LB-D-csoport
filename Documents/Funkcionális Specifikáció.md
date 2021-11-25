@@ -77,8 +77,6 @@ oldal admin felületére belép -> felhasználók jogosultsági körét módosí
 
 #### Képernyőtervek
 
-![56](C:\Users\Telegdi Tamás\Desktop\56.png)
-
 Belépés nélkül is meg kell jelennie az oldal valamennyi funkciójának, de annak használatát regisztrációhoz kell kötni. Tehát a belépett és regisztráció nélküli oldal között látszólag nincs különbség.
 
 Az oldal logója az oldal tetején szerepeljen, egy sávban. Rákattintva az oldal főoldala jelenik meg. Ez alatt helyezkedik el a menüsor, ahol az alábbi lehetőségek fogadnak balról jobbra:
