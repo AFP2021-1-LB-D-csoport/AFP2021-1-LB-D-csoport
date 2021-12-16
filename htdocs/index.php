@@ -14,9 +14,9 @@ require_once 'private/utils/require.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <header class="text-center d-flex" id="header"><?php @include_once COMPONENTS_DIR.'header.php'; ?></header>
+    <header class="text-center" id="header"><?php @include_once COMPONENTS_DIR.'header.php'; ?></header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark"><?php require_once COMPONENTS_DIR.'menu.php'; ?></nav>
-    <main><?php require_once CONTENT_DIR.'content.php'; ?></main>
+    <main class="foundation"><?php require_once CONTENT_DIR.'content.php'; ?></main>
     <footer class="text-center" id="footer"><?php @include_once COMPONENTS_DIR.'footer.php'; ?></footer>
 </body>
 </html>
