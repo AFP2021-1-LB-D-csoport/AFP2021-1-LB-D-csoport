@@ -4,15 +4,19 @@ a {
 }
 
 #footer {
-  margin-top: 30px;
   padding: 20px;
   color: #fff;
   background: #333;
 }
 
 #header {
-  margin-top: 30px;
   padding: 20px;
   color: #fff;
   background: #333;
+}
+
+.foundation {
+  padding: 20px;
+  color: #fff;
+  background: #666;
 }

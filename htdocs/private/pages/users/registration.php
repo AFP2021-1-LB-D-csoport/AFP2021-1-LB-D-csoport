@@ -1,16 +1,24 @@
-<form action="" method="post">
+<form action="" method="post" class="col-lg-3 col-md-4 col-sm-6">
   <fieldset>
-    <legend>Regisztrációs adatok</legend>
+    <legend class="display-6 mb-4">Regisztrációs adatok</legend>
     <br>
-    <label for="username">*Felhasználónév:</label><br>
-    <input type="text" id="username" name="username" required><br>
-    <label for="email">*Email cím:</label><br>
-    <input type="email" id="email" name="email" required><br>
-    <label for="pwd">*Jelszó:</label><br>
-    <input type="password" id="pwd" name="pwd" required><br>
-    <label for="name">Név:</label><br>
-    <input type="text" id="name" name="name"><br>
+    <div class="form-group h5">
+      <label class="p-2" for="username">*Felhasználónév:</label><br>
+      <input class="form-control" type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group h5">
+      <label class="p-2" for="email">*Email cím:</label><br>
+      <input class="form-control mb-3" type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group h5">
+      <label class="p-2" for="pwd">*Jelszó:</label><br>
+      <input class="form-control" type="password" id="pwd" name="pwd" required>
+    </div>
+    <div class="form-group h5">
+      <label class="p-2" for="phone">Telefonszám:</label><br>
+      <input class="form-control" type="text" id="phone" name="phone">
+    </div>
   </fieldset>
-  
-   <input name="submit" id="submit" type="submit" value="Regisztráció">
+  </br>
+  <input class="btn btn-primary btn-md h5" name="submit" id="submit" type="submit" value="Regisztráció">
 </form>
