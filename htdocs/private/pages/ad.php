@@ -4,7 +4,7 @@
     <head></head>
         <body>
 
-        <form action ="private/pages/ad_new.php" method="post">
+        <form action ="" method="post">
            Telepules: <input type = "text" name="varos"/><br/> <br/>
            Utca <input type = "text" name="hazszam"/> <br/> <br/>
            Hazszam <input type = "text" name="utca"/><br/> <br/>
