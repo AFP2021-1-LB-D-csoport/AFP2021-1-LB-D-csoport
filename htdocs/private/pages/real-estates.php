@@ -8,3 +8,8 @@ function my_ads(){
     $result = select($query);
     require_once REAL_ESTATES_DIR.'list.php';
 }
+
+function enlist(){
+    $result = null;
+    require_once REAL_ESTATES_DIR.'list.php';
+}

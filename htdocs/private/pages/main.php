@@ -3,7 +3,7 @@
         <div class="display-6 mb-4 text-center">
             <p>Keresse meg álmai ingatlanát</p>
         </div>
-        <form action="" method="post">
+        <form action="http://localhost/AFP2021-1-LB-D-csoport/htdocs/index.php?p=real-estates&m=enlist" method="post">
             <div class="d-flex align-items-center justify-content-center">
                 <div class="form-group h5 col-lg-2 p-2">
                     <select id="property_type" name="property_type" class="p-1">
@@ -35,5 +35,18 @@
                 <input class="btn btn-primary btn-md h5 col-lg-2 p-2" name="submit" id="submit" type="submit" value="Keresés">
             </div>
         </form>
+        <div id="dropdownButton" class="text-center dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="detailedSearchButton1" data-toggle="dropdown">
+                Részletes kereső
+            </button>
+        </div>
+        <div id="dropupButton" class="text-center dropup" hidden>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="detailedSearchButton2" data-toggle="dropdown">
+                Részletes kereső
+            </button>
+        </div>
+        <div class="text-center"id="detailedSearchPanel" hidden>
+            <div>Na, ide jöhet majd a részletes kereső</div>
+        </div>
     </div>
 </div>
