@@ -10,7 +10,7 @@ CREATE TABLE admin (
 );
 
 COMMENT ON COLUMN admin.permission_type IS
-    'JOGOSULTS¡GI SZINT';
+    'JOGOSULTS√ÅGI SZINT';
 
 ALTER TABLE admin ADD CONSTRAINT admin_pk PRIMARY KEY ( admin_id );
 
@@ -126,10 +126,10 @@ CREATE TABLE property_description (
 );
 
 COMMENT ON COLUMN property_description.property_type IS
-    '…P‹LET TÕPUSA (T…GLA, PANEL,...)';
+    '√âP√úLET T√çPUSA (T√âGLA, PANEL,...)';
 
 COMMENT ON COLUMN property_description.basement_loft IS
-    'SZUTER…N?';
+    'SZUTER√âN?';
 
 ALTER TABLE property_description ADD CONSTRAINT property_description_pk PRIMARY KEY ( property_id );
 
@@ -244,8 +244,7 @@ ALTER TABLE admin
 
 ALTER TABLE photos
     ADD CONSTRAINT photos_property_x_photo_fk FOREIGN KEY ( photo_id )
-        REFERENCES property_x_photo ( property_id,
-                                      photo_id );
+        REFERENCES property_x_photo ( photo_id );
 
 ALTER TABLE profile
     ADD CONSTRAINT profile_property_x_profile_fk FOREIGN KEY ( profile_id )
