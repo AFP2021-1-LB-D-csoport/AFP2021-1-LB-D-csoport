@@ -18,11 +18,11 @@
                 </div>
                 <div class="row col-lg-2 text-center h5 p-2">
                     <div class="form-check">
-                        <input type="radio" name="for_sale_or_to_rent" id="for_sale_or_to_rent" value="for_sale" checked>
+                        <input type="radio" name="for_sale_or_to_rent" id="for_sale_or_to_rent" value="eladó" checked>
                         <label class="form-check-label" for="for_sale_or_to_rent">Eladó</label>
                     </div>
                     <div class="form-check">
-                        <input type="radio" name="for_sale_or_to_rent" id="for_sale_or_to_rent" value="to_rent">
+                        <input type="radio" name="for_sale_or_to_rent" id="for_sale_or_to_rent" value="kiadó">
                         <label class="form-check-label" for="for_sale_or_to_rent">Kiadó</label>
                     </div>
                 </div>
