@@ -13,13 +13,38 @@
     </div>
     <div class="form-group h5">
       <label class="p-2" for="házszám">*Házszám:</label><br>
-      <input class="form-control" type="text" id="házszám" name="házszám" required>
+      <input class="form-control" type="number" id="házszám" name="házszám" required>
     </div>
     <div class="form-group h5">
       <label class="p-2" for="hszám">*Helyrajzi szám:</label><br>
-      <input class="form-control" type="text" id="hszám" name="hszám">
+      <input class="form-control" type="number" id="hszám" name="hszám">
     </div>
-  </fieldset>
+    <legend class="display-6 mb-4">Ingatlan jellemzői</legend>
+    <br>
+    <div class="form-group h5">
+      <label class="p-2" for="price">*Ingatlan ára:</label><br>
+      <input class="form-control" type="number" id="price" name="price" required>
+    </div>
+    <div class="form-group h5">
+      <label class="p-2" for="number_floor">*Szintek száma:</label><br>
+      <input class="form-control mb-3" type="number" id="number_floor" name="number_floor" required>
+    </div>
+    <form action="http://localhost/AFP2021-1-LB-D-csoport/htdocs/index.php?p=real-estates&m=enlist" method="post">
+    <div class="form-group h5">
+      <label class="p-2" for="hszám">*Ingatlan típusa:</label><br> 
+    </div>     
+    <div class="form-group h5 col-lg-2 p-2">
+                    <select id="property_type" name="property_type" class="p-1">
+                    <option selected>Ház</option>
+                    <option>Lakás</option>
+                    <option>Nyaraló</option>
+                    <option>Garázs</option>
+                    <option>Iroda</option>
+                    <option>Üzlethelyiség</option>
+                    <option>Raktár</option>
+                    </select>
+    </div>
+ </fieldset>
   </br>
   <input class="btn btn-primary btn-md h5" name="submit" id="submit" type="submit" value="Küldés">
 </form>
