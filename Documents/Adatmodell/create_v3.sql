@@ -1,7 +1,7 @@
 
 
 CREATE TABLE admin (
-    admin_id         NUMBER NOT NULL,
+    admin_id         VARCHAR2(100) NOT NULL,
     profile_id       NUMBER NOT NULL,
     realtor_id       NUMBER NOT NULL,
     permission_type  VARCHAR2(100),
@@ -10,7 +10,7 @@ CREATE TABLE admin (
 );
 
 COMMENT ON COLUMN admin.permission_type IS
-    'JOGOSULTS¡GI SZINT';
+    'JOGOSULTS√ÅGI SZINT';
 
 ALTER TABLE admin ADD CONSTRAINT admin_pk PRIMARY KEY ( admin_id );
 
@@ -54,11 +54,12 @@ ALTER TABLE photos ADD CONSTRAINT photos_pk PRIMARY KEY ( photo_id );
 
 CREATE TABLE profile (
     profile_id           NUMBER NOT NULL,
-    user_name            VARCHAR2(100),
-    email_address        VARCHAR2(100),
+    user_name            VARCHAR2(100) NOT NULL,
+    email_address        VARCHAR2(100) NOT NULL,
     phone_number         VARCHAR2(100),
     date_of_registration DATE NOT NULL,
-    status               VARCHAR2(10) NOT NULL
+    status               VARCHAR2(10) NOT NULL,
+    pwd                  VARCHAR2(100) NOT NULL
 );
 
 ALTER TABLE profile ADD CONSTRAINT profile_pk PRIMARY KEY ( profile_id );
@@ -125,10 +126,10 @@ CREATE TABLE property_description (
 );
 
 COMMENT ON COLUMN property_description.property_type IS
-    '…P‹LET TÕPUSA (T…GLA, PANEL,...)';
+    '√âP√úLET T√çPUSA (T√âGLA, PANEL,...)';
 
 COMMENT ON COLUMN property_description.basement_loft IS
-    'SZUTER…N?';
+    'SZUTER√âN?';
 
 ALTER TABLE property_description ADD CONSTRAINT property_description_pk PRIMARY KEY ( property_id );
 
@@ -243,8 +244,7 @@ ALTER TABLE admin
 
 ALTER TABLE photos
     ADD CONSTRAINT photos_property_x_photo_fk FOREIGN KEY ( photo_id )
-        REFERENCES property_x_photo ( property_id,
-                                      photo_id );
+        REFERENCES property_x_photo ( photo_id );
 
 ALTER TABLE profile
     ADD CONSTRAINT profile_property_x_profile_fk FOREIGN KEY ( profile_id )
@@ -263,11 +263,11 @@ ALTER TABLE property_description
         REFERENCES property_conditions ( property_condition_code );
 
 ALTER TABLE property_description
-    ADD CONSTRAINT property_desc_attic_types_fk FOREIGN KEY ( attic_loft )
+    ADD CONSTRAINT property_descr_attic_types_fk FOREIGN KEY ( attic_loft )
         REFERENCES attic_types ( attic_type_code );
-
+ 
 ALTER TABLE property_description
-    ADD CONSTRAINT property_desc_property_fk FOREIGN KEY ( property_id )
+    ADD CONSTRAINT property_descr_property_fk FOREIGN KEY ( property_id )
         REFERENCES property ( property_id );
 
 ALTER TABLE property_location
@@ -338,3 +338,4 @@ ALTER TABLE realtor
     ADD CONSTRAINT realtor_property_x_realtor_fk FOREIGN KEY ( realtor_id )
         REFERENCES property_x_realtor ( property_id,
                                         realtor_id );
+

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="DATA MODEL V3" id="6D4AA9A7-C8A8-9FBE-B30C-DE0BFDB0B735" version="3.5">
+<createdBy>Nyíri Tímea</createdBy>
+<createdTime>2021-10-15 04:27:40 UTC</createdTime>
+<ownerDesignName>DATA MODEL V1</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>6D4AA9A7-C8A8-9FBE-B30C-DE0BFDB0B735</designId>
+</OSDM_Design>
