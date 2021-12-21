@@ -132,7 +132,7 @@ CREATE TABLE property_description (
     heating_type        VARCHAR(5),
     parking             VARCHAR(5),
     comfort_rate        VARCHAR(100),
-    attic_loft          VARCHAR(2),
+    attic_loft          VARCHAR(5),
     bathroom_toilet     VARCHAR(5),
     floor_number        NUMERIC,
     avg_room_height     NUMERIC,
