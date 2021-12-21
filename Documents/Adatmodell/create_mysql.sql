@@ -236,8 +236,8 @@ CREATE TABLE property_x_realtor (
 
 CREATE TABLE admin (
     admin_id         VARCHAR(100) NOT NULL,
-    profile_id       VARCHAR(100) NOT NULL,
-    realtor_id       VARCHAR(100) NOT NULL,
+    profile_id       VARCHAR(100),
+    realtor_id       VARCHAR(100),
     permission_type  VARCHAR(100),
     permission_start DATE,
     permission_end   DATE,
