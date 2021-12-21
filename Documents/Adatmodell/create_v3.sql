@@ -17,7 +17,7 @@ CREATE TABLE property_type (
 CREATE TABLE property (
     property_id      VARCHAR2(100) NOT NULL,
     date_on_market   DATE,
-    date_of_market   DATE,
+    date_off_market  DATE,
     status           VARCHAR2(100) NOT NULL,
     property_type_id VARCHAR2(2) NOT NULL,
     CONSTRAINT property_pk PRIMARY KEY ( property_id ),
