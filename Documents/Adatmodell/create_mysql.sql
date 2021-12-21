@@ -7,13 +7,13 @@ CREATE TABLE profile (
     date_of_registration DATE NOT NULL,
     status               VARCHAR(10) NOT NULL,
     pwd                  VARCHAR(100),
-    CONSTRAINT profile_pk PRIMARY KEY ( profile_id )
+    PRIMARY KEY ( profile_id )
 );
 
 CREATE TABLE property_type (
     property_type_id   VARCHAR(2) NOT NULL,
     property_type_desc VARCHAR(100),
-    CONSTRAINT property_type_pk PRIMARY KEY ( property_type_id )
+    PRIMARY KEY ( property_type_id )
 );
 
 CREATE TABLE property (
@@ -22,7 +22,7 @@ CREATE TABLE property (
     date_off_market  DATE,
     status           VARCHAR(100) NOT NULL,
     property_type_id VARCHAR(2) NOT NULL,
-    CONSTRAINT property_pk PRIMARY KEY ( property_id ),
+    PRIMARY KEY ( property_id ),
     CONSTRAINT property_type_fk FOREIGN KEY ( property_type_id )
         REFERENCES property_type ( property_type_id )
 );
@@ -33,49 +33,49 @@ CREATE TABLE photos (
     description NVARCHAR(800),
     title       NVARCHAR(100),
     status      VARCHAR(10),
-    CONSTRAINT photos_pk PRIMARY KEY ( photo_id )
+    PRIMARY KEY ( photo_id )
 );
 
 CREATE TABLE attic_types (
     attic_type_code VARCHAR(5) NOT NULL,
     attic_type_desc VARCHAR(100),
-    CONSTRAINT attic_types_pk PRIMARY KEY ( attic_type_code )
+    PRIMARY KEY ( attic_type_code )
 );
 
 CREATE TABLE bathroom_toilet_types (
     bathroom_toilet_type_code VARCHAR(5) NOT NULL,
     bathroom_toilet_type_desc VARCHAR(100),
-    CONSTRAINT bathroom_toilet_types_pk PRIMARY KEY ( bathroom_toilet_type_code )
+    PRIMARY KEY ( bathroom_toilet_type_code )
 );
 
 CREATE TABLE e_w_g_p_types (
     e_w_g_p_type_code VARCHAR(5) NOT NULL,
     e_w_g_p_type_desc VARCHAR(100),
-    CONSTRAINT e_w_g_p_types_pk PRIMARY KEY ( e_w_g_p_type_code )
+    PRIMARY KEY ( e_w_g_p_type_code )
 );
 
 CREATE TABLE parking_types (
     parking_type_code VARCHAR(5) NOT NULL,
     parking_type_desc VARCHAR(100),
-    CONSTRAINT parking_types_pk PRIMARY KEY ( parking_type_code )
+    PRIMARY KEY ( parking_type_code )
 );
 
 CREATE TABLE property_comfort_types (
     comfort_type_code VARCHAR(5) NOT NULL,
     comfort_type_desc VARCHAR(100),
-    CONSTRAINT property_comfort_types_pk PRIMARY KEY ( comfort_type_code )
+    PRIMARY KEY ( comfort_type_code )
 );
 
 CREATE TABLE property_conditions (
     property_condition_code VARCHAR(5) NOT NULL,
     property_condition_desc VARCHAR(100),
-    CONSTRAINT property_conditions_pk PRIMARY KEY ( property_condition_code )
+    PRIMARY KEY ( property_condition_code )
 );
 
 CREATE TABLE property_heatings (
     heating_type_code VARCHAR(5) NOT NULL,
     heating_type_desc VARCHAR(100),
-    CONSTRAINT property_heatings_pk PRIMARY KEY ( heating_type_code )
+    PRIMARY KEY ( heating_type_code )
 );
 
 CREATE TABLE property_location (
@@ -88,7 +88,7 @@ CREATE TABLE property_location (
     building_number VARCHAR(10),
     floor_number    VARCHAR(10),
     door_number     VARCHAR(10),
-     CONSTRAINT property_location_pk PRIMARY KEY ( property_id ),
+    PRIMARY KEY ( property_id ),
      CONSTRAINT property_location_property_fk FOREIGN KEY ( property_id )
         REFERENCES property ( property_id )
 );
@@ -96,31 +96,31 @@ CREATE TABLE property_location (
 CREATE TABLE property_orientations (
     property_orientation_code VARCHAR(5) NOT NULL,
     property_orientation_desc VARCHAR(100),
-    CONSTRAINT property_orientations_pk PRIMARY KEY ( property_orientation_code )
+    PRIMARY KEY ( property_orientation_code )
 );
 
 CREATE TABLE property_sub_types (
     property_sub_type_code VARCHAR(5) NOT NULL,
     property_sub_type_desc VARCHAR(100),
-    CONSTRAINT property_sub_types_pk PRIMARY KEY ( property_sub_type_code )
+    PRIMARY KEY ( property_sub_type_code )
 );
 
 CREATE TABLE property_types (
     property_type_code VARCHAR(5) NOT NULL,
     property_type_desc VARCHAR(100),
-    CONSTRAINT property_types_pk PRIMARY KEY ( property_type_code )
+    PRIMARY KEY ( property_type_code )
 );
 
 CREATE TABLE property_views (
     property_view_code VARCHAR(5) NOT NULL,
     property_view_desc VARCHAR(100),
-    CONSTRAINT property_views_pk PRIMARY KEY ( property_view_code )
+    PRIMARY KEY ( property_view_code )
 );
 
 CREATE TABLE stairs_types (
     stair_type_code VARCHAR(5) NOT NULL,
     stair_type_desc VARCHAR(100),
-    CONSTRAINT stairs_types_pk PRIMARY KEY ( stair_type_code )
+    PRIMARY KEY ( stair_type_code )
 );
 
 CREATE TABLE property_description (
@@ -158,7 +158,7 @@ CREATE TABLE property_description (
     water               VARCHAR(5),
     gas                 VARCHAR(5),
     pipage              VARCHAR(5),
-    CONSTRAINT property_description_pk PRIMARY KEY ( property_id ),
+    PRIMARY KEY ( property_id ),
     CONSTRAINT property_views_fk FOREIGN KEY ( property_view )
         REFERENCES property_views ( property_view_code ),
     CONSTRAINT property_types_fk FOREIGN KEY ( property_type )
@@ -202,13 +202,13 @@ CREATE TABLE realtor (
     email_address VARCHAR(100),
     photo_file    VARCHAR(800),
     work_end_date DATE,
-    CONSTRAINT realtor_pk PRIMARY KEY ( realtor_id )
+    PRIMARY KEY ( realtor_id )
 );
 
 CREATE TABLE property_x_photo (
     property_id VARCHAR(100) NOT NULL,
     photo_id    VARCHAR(100) NOT NULL,
-    CONSTRAINT property_x_photo_pk PRIMARY KEY ( property_id, photo_id ),
+    PRIMARY KEY ( property_id, photo_id ),
     CONSTRAINT property_x_ph_phot_fk FOREIGN KEY ( photo_id )
         REFERENCES photos ( photo_id ),
     CONSTRAINT property_x_ph_prop_fk FOREIGN KEY ( property_id )
@@ -218,7 +218,7 @@ CREATE TABLE property_x_photo (
 CREATE TABLE property_x_profile (
     property_id VARCHAR(100) NOT NULL,
     profile_id  VARCHAR(100) NOT NULL,
-    CONSTRAINT property_x_profile_pk PRIMARY KEY ( property_id, profile_id ),
+    PRIMARY KEY ( property_id, profile_id ),
     CONSTRAINT property_x_pr_prof_fk FOREIGN KEY ( profile_id )
         REFERENCES profile ( profile_id ),
     CONSTRAINT property_x_pr_prop_fk FOREIGN KEY ( property_id )
@@ -228,7 +228,7 @@ CREATE TABLE property_x_profile (
 CREATE TABLE property_x_realtor (
     property_id VARCHAR(100) NOT NULL,
     realtor_id  VARCHAR(100) NOT NULL,
-    CONSTRAINT property_x_realtor_pk PRIMARY KEY ( property_id, realtor_id ),
+    PRIMARY KEY ( property_id, realtor_id ),
     CONSTRAINT property_x_re_real_fk FOREIGN KEY ( realtor_id )
         REFERENCES realtor ( realtor_id ),
     CONSTRAINT property_x_re_prop_fk FOREIGN KEY ( property_id )
@@ -243,7 +243,7 @@ CREATE TABLE admin (
     permission_start DATE,
     permission_end   DATE,
     
-    CONSTRAINT admin_pk PRIMARY KEY ( admin_id ),
+    PRIMARY KEY ( admin_id ),
     CONSTRAINT admin_profile_fk FOREIGN KEY ( profile_id )
         REFERENCES profile ( profile_id ),
     CONSTRAINT admin_realtor_fk FOREIGN KEY ( realtor_id )
