@@ -6,6 +6,7 @@ CREATE TABLE profile (
     phone_number         VARCHAR(100),
     date_of_registration DATE NOT NULL,
     status               VARCHAR(10) NOT NULL,
+    pwd                  VARCHAR(100),
     CONSTRAINT profile_pk PRIMARY KEY ( profile_id )
 );
 
