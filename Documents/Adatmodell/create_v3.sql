@@ -1,5 +1,5 @@
 CREATE TABLE profile (
-    profile_id           NUMBER NOT NULL,
+    profile_id           VARCHAR2(100) NOT NULL,
     user_name            VARCHAR2(100),
     email_address        VARCHAR2(100),
     phone_number         VARCHAR2(100),
@@ -15,7 +15,7 @@ CREATE TABLE property_type (
 );
 
 CREATE TABLE property (
-    property_id      NUMBER NOT NULL,
+    property_id      VARCHAR2(100) NOT NULL,
     date_on_market   DATE,
     date_of_market   DATE,
     status           VARCHAR2(100) NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE property (
 );
 
 CREATE TABLE photos (
-    photo_id    NUMBER NOT NULL,
+    photo_id    VARCHAR2(100) NOT NULL,
     "FILE"      NVARCHAR2(800) NOT NULL,
     description NVARCHAR2(800),
     title       NVARCHAR2(100),
@@ -77,7 +77,7 @@ CREATE TABLE property_heatings (
 );
 
 CREATE TABLE property_location (
-    property_id     NUMBER NOT NULL,
+    property_id     VARCHAR2(100) NOT NULL,
     zip_code        VARCHAR2(4) NOT NULL,
     city            NVARCHAR2(500),
     street_name     NVARCHAR2(500),
@@ -122,7 +122,7 @@ CREATE TABLE stairs_types (
 );
 
 CREATE TABLE property_description (
-    property_id         NUMBER NOT NULL,
+    property_id         VARCHAR2(100) NOT NULL,
     property_type       VARCHAR2(5) NOT NULL,
     property_sub_type   VARCHAR2(5) NOT NULL,
     property_condition  VARCHAR2(5),
@@ -190,7 +190,7 @@ CREATE TABLE property_description (
 );
 
 CREATE TABLE realtor (
-    realtor_id    NUMBER NOT NULL,
+    realtor_id    VARCHAR2(100) NOT NULL,
     first_name    NVARCHAR2(100) NOT NULL,
     middle_name   NVARCHAR2(100),
     last_name     NVARCHAR2(100) NOT NULL,
@@ -204,8 +204,8 @@ CREATE TABLE realtor (
 );
 
 CREATE TABLE property_x_photo (
-    property_id NUMBER NOT NULL,
-    photo_id    NUMBER NOT NULL,
+    property_id VARCHAR2(100) NOT NULL,
+    photo_id    VARCHAR2(100) NOT NULL,
     CONSTRAINT property_x_photo_pk PRIMARY KEY ( property_id, photo_id ),
     CONSTRAINT property_x_ph_phot_fk FOREIGN KEY ( photo_id )
         REFERENCES photos ( photo_id ),
@@ -214,8 +214,8 @@ CREATE TABLE property_x_photo (
 );
 
 CREATE TABLE property_x_profile (
-    property_id NUMBER NOT NULL,
-    profile_id  NUMBER NOT NULL,
+    property_id VARCHAR2(100) NOT NULL,
+    profile_id  VARCHAR2(100) NOT NULL,
     CONSTRAINT property_x_profile_pk PRIMARY KEY ( property_id, profile_id ),
     CONSTRAINT property_x_pr_prof_fk FOREIGN KEY ( profile_id )
         REFERENCES profile ( profile_id ),
@@ -224,8 +224,8 @@ CREATE TABLE property_x_profile (
 );
 
 CREATE TABLE property_x_realtor (
-    property_id NUMBER NOT NULL,
-    realtor_id  NUMBER NOT NULL,
+    property_id VARCHAR2(100) NOT NULL,
+    realtor_id  VARCHAR2(100) NOT NULL,
     CONSTRAINT property_x_realtor_pk PRIMARY KEY ( property_id, realtor_id ),
     CONSTRAINT property_x_re_real_fk FOREIGN KEY ( realtor_id )
         REFERENCES realtor ( realtor_id ),
@@ -234,9 +234,9 @@ CREATE TABLE property_x_realtor (
 );
 
 CREATE TABLE admin (
-    admin_id         NUMBER NOT NULL,
-    profile_id       NUMBER NOT NULL,
-    realtor_id       NUMBER NOT NULL,
+    admin_id         VARCHAR2(100) NOT NULL,
+    profile_id       VARCHAR2(100) NOT NULL,
+    realtor_id       VARCHAR2(100) NOT NULL,
     permission_type  VARCHAR2(100),
     permission_start DATE,
     permission_end   DATE,
