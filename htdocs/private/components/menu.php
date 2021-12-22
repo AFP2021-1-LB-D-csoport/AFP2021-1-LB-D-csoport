@@ -5,15 +5,14 @@
 <?php
 
   if (isset($_SESSION['user'])){
-    $menu[] = ['href' => '?p=real-estates&m=my_ads', 'title' => 'Saját hirdetéseim'];
+    $menu[] = ['href' => '?p=users&m=settings', 'title' => $_SESSION['user']['user_name']];
     $menu[] = ['href' => '?p=users&m=logout', 'title' => 'Kijelentkezés'];
-    $menu[] = ['href' => '?p=users&m=settings', 'title' => $_SESSION['user']];
+    $menu[] = ['href' => '?p=ad', 'title' => 'Hirdetés feladása'];
+    $menu[] = ['href' => '?p=real-estates&m=my_ads', 'title' => 'Saját hirdetéseim'];
   } else {
     $menu[] = ['href' => '?p=users&m=registration', 'title' => 'Regisztráció'];
     $menu[] = ['href' => '?p=users&m=login', 'title' => 'Bejelentkezés'];
   }
-
-  $menu[] = ['href' => '?p=ad', 'title' => 'Hírdetés feladása'];
   $menu[] = ['href' => '?p=about', 'title' => 'Rólunk'];
   $menu[] = ['href' => '?p=main', 'title' => 'Főoldal'];  
   
