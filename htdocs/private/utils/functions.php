@@ -25,3 +25,12 @@ function generate_attributes($key_value_pair){
     }
     return $tag_string;
 }
+
+function phoneCheck($number){
+    $pattern = "\+?([0-9]{2})-?([0-9]{2})-?([0-9]{3})-?([0-9]{3,4})";
+    return preg_match($pattern, $number);
+}
+
+function emailCheck($email){
+    return filter_var($email, FILTER_VALIDATE_EMAIL);
+}
