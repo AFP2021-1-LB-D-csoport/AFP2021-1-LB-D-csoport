@@ -7,14 +7,13 @@ abstract class AProperty
     public $subtype;
     public $ar;
     public $owner;
+    public $realtor;
     public $status;
     public $tipus;
     public $dateOnMarket;
     public $dateOfMarket = null;
 
     public abstract function SaveToDescription();
-
-    public abstract function SaveToPropTable();
 
     public abstract function UpdateOnDesc();
 
@@ -31,7 +30,19 @@ abstract class AProperty
         $connection = null;
     }
 
-    public function UpdateOnProp(){
+
+    public function SaveToPropertyTable(){
+        $query = "INSERT INTO property VALUES (:id, :datum, null, :status, :tipus);";
+        $data = array(
+            'id' => $this->id,
+            'datum' => $this->dateOnMarket,
+            'status' => $this->status,
+            'tipus' => $this->GetTipusIdByName($this->tipus)
+        );
+        insert_into($query,$data);
+    }
+
+    public function UpdateOnPropertyTable(){
         $query = "UPDATE property SET date_on_market = :date, status = :status, property_type_id = :tipus WHERE property_id = :id;";
         $data = array(
             'id' => $this->id,
@@ -39,7 +50,7 @@ abstract class AProperty
             'status' => $this->status,
             'tipus' => $this->GetTipusIdByName($this->tipus)
         );
-        update($query,true, $data);
+        update($query, $data);
     }
 
     public function GetTipusNameById($id){
