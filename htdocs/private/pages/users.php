@@ -34,12 +34,12 @@ function registration(){
     if (!filter_has_var(INPUT_POST, 'submit')){
         require USERS_DIR.'registration.php';
     } else {
-        $id = select('SELECT MAX(profile_id) FROM profile');
-        $id = $id + 1;
+        //$id = select('SELECT MAX(profile_id) FROM profile');
+        //$id = $id + 1;
         $username = filter_input(INPUT_POST, 'username');
         $email = filter_input(INPUT_POST, 'email');
-        $date = "TO_DATE(2021-12-19)";
-        $status = 'offline';
+        $date = '2021-12-19';
+        $status = 'active';
         $password = filter_input(INPUT_POST, 'pwd');
         insert_into('INSERT INTO profile (profile_id, user_name, email_address, date_of_registration, status, pwd) 
             VALUES (:profile_id, :user_name, :email_address, :date_of_registration, :status, :pwd)', 
@@ -47,4 +47,8 @@ function registration(){
             $date, 'status' => $status, 'pwd' => $password]);
         header('Location: '.BASE_URL);
     }
+}
+
+function settings() {
+    echo 'Ide jön a profil beállítások rész';
 }

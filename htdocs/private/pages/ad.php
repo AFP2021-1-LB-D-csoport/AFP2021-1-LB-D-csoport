@@ -1,4 +1,3 @@
-
 <form action="" method="post" class="col-lg-3 col-md-4 col-sm-6 mx-auto">
   <fieldset>
     <legend class="display-6 mb-4">Hirdetés feladása</legend>
@@ -61,5 +60,3 @@
   </br>
   <input class="btn btn-primary btn-md h5" name="submit" id="submit" type="submit" value="Küldés">
 </form>
-
-
