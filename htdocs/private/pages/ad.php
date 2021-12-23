@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <form action="" method="post" class="col-lg-3 col-md-4 col-sm-6 mx-auto">
   <fieldset>
     <legend class="display-6 mb-4">Hirdetés feladása</legend>
@@ -48,23 +48,5 @@
   </br>
   <input class="btn btn-primary btn-md h5" name="submit" id="submit" type="submit" value="Küldés">
 </form>
-=======
-<!DOCTYPE html>
-<html>
 
-    <head></head>
-        <body>
 
-        <form action ="" method="post">
-           Telepules: <input type = "text" name="varos"/><br/> <br/>
-           Utca <input type = "text" name="hazszam"/> <br/> <br/>
-           Hazszam <input type = "text" name="utca"/><br/> <br/>
-           Helyrajzi szam <input type = "text" name="utca"/><br/> <br/>
-            <input type = "submit" value="Kuldd!"/>
-        </form>
-        </body>
-
-</html>
-<?php
-?>
->>>>>>> a717f7a88cf3a10957f971debda52f75bc46b994
