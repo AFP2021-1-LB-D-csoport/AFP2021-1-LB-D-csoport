@@ -44,6 +44,19 @@
                     <option>Raktár</option>
                     </select>
     </div>
+    <div class="form-group h5">
+      <label class="p-2" for="number_floor">*Rendelkezik pincével?:</label><br>
+    </div>
+    <div class="row col-lg-2 text-center h5 p-2">
+                    <div class="form-check">
+                        <input type="radio" name="van_pince vagy nincs" id="van_pince vagy nincs" value="for_sale" checked>
+                        <label class="form-check-label" for="for_sale_or_to_rent">Nem</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="van_pince vagy nincs" id="van_pince vagy nincs" value="to_rent">
+                        <label class="form-check-label" for="van_pince vagy nincs">Igen</label>
+                    </div>
+                </div>
  </fieldset>
   </br>
   <input class="btn btn-primary btn-md h5" name="submit" id="submit" type="submit" value="Küldés">
