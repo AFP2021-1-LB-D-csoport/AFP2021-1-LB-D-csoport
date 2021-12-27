@@ -72,7 +72,8 @@ class Telek extends AProperty
             'property_type' => "telek",
             'property_subtype'=> $this->subtype,
             'ar' => $this->ar,
-            'terulet' => $this->telekterulet);
+            'terulet' => $this->telekterulet
+        );
         return $data;
     }
 
@@ -105,6 +106,13 @@ class Telek extends AProperty
             return $r;
         }
     }
+    private function GetSubtypeById($subtype_id)
+    {
+        $result = (select( "SELECT property_sub_type_desc FROM property_sub_types WHERE property_sub_type_code = '".$subtype_id."';",true, null));
+        foreach ($result as $r){
+            return $r;
+        }
+    }
 
     private function GetV_V_G_CS_Id($needed)
     {
@@ -114,13 +122,6 @@ class Telek extends AProperty
         }
     }
 
-    private function GetSubtypeById($subtype_id)
-    {
-        $result = (select( "SELECT property_sub_type_desc FROM property_sub_types WHERE property_sub_type_code = '".$subtype_id."';",true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
 
     private function GetV_V_G_CS_Desc($id)
     {
