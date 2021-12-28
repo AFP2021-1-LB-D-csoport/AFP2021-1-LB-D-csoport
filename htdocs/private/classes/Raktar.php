@@ -1,31 +1,34 @@
 <?php
 
-class Garazs extends AProperty
+class Raktar extends AProperty
 {
-    function __construct(int $id, string $subtype, int $ar, int $alapterulet, string $allapot)
+    function __construct(int $id, string $subtype, int $ar, int $alapterulet, int $telekterulet, string $allapot)
     {
         $this->id = $id;
         $this->subtype = $this->GetSubtypeById($subtype);
         $this->ar = $ar;
         $this->alapterulet = $alapterulet;
+        $this->telekterulet = $telekterulet;
         $this->allapot = $this->GetAllopotDescById($allapot);
     }
 
     public $alapterulet;
     public $allapot;
+    public $telekterulet;
 
     public function SaveToDescription()
     {
         $type = $this->GetTypeId();
         $subtype = $this->GetSubtypeId($this->subtype);
-        $query = "INSERT INTO property_description(property_id, property_type, property_sub_type, property_price, property_size, property_condition) VALUES (:id, :type, :subtype, :ar, :terulet, :allapot);";
+        $query = "INSERT INTO property_description(property_id, property_type, property_sub_type, property_price, property_size, property_condition, plot_size) VALUES (:id, :type, :subtype, :ar, :terulet, :allapot, :telekterulet);";
         $data = array(
             'id' => $this->id,
             'type' => $type,
             'subtype' => $subtype,
             'ar' => $this->ar,
             'terulet' => $this->alapterulet,
-            'allapot' => $this->GetAllapotIdByDesc($this->allapot)
+            'allapot' => $this->GetAllapotIdByDesc($this->allapot),
+            'telekterulet' => $this->telekterulet
         );
         insert_into($query, $data);
     }
@@ -33,13 +36,14 @@ class Garazs extends AProperty
     public function UpdateOnDesc()
     {
         $subtype = $this->GetSubtypeId($this->subtype);
-        $query = "UPDATE property_description SET property_sub_type = :subtype, property_price = :ar, property_size = :terulet, property_condition = :allapot WHERE property_id = :id;";
+        $query = "UPDATE property_description SET property_sub_type = :subtype, property_price = :ar, property_size = :terulet, property_condition = :allapot, plot_size = :telekterulet WHERE property_id = :id;";
         $data = array(
             'id' => $this->id,
             'subtype' => $subtype,
             'ar' => $this->ar,
             'terulet' => $this->alapterulet,
-            'allapot' => $this->GetAllapotIdByDesc($this->allapot)
+            'allapot' => $this->GetAllapotIdByDesc($this->allapot),
+            'telekterulet' => $this->telekterulet
         );
         update($query, $data);
     }
@@ -48,22 +52,25 @@ class Garazs extends AProperty
     {
         $data = array(
             'id' => $this->id,
-            'property_type' => "garazs",
+            'property_type' => "raktar",
             'subtype' => $this-> subtype,
             'ar' => $this->ar,
-            'alapterulet' => $this->alapterulet
+            'alapterulet' => $this->alapterulet,
+            'telekterulet' => $this->telekterulet
         );
         return $data;
     }
 
     public function GetAllData(): array
     {
-        $data = array('id' => $this->id,
-            'property_type' => "garazs",
+        $data = array(
+            'id' => $this->id,
+            'property_type' => "raktar",
             'subtype' => $this->subtype,
             'ar' => $this->ar,
             'alapterulet' => $this->alapterulet,
-            'allapot' => $this->allapot
+            'allapot' => $this->allapot,
+            'telekterulet' => $this->telekterulet
         );
         return $data;
     }
@@ -105,6 +112,4 @@ class Garazs extends AProperty
             return $r;
         }
     }
-
 }
-?>

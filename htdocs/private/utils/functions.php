@@ -34,3 +34,8 @@ function phoneCheck($number){
 function emailCheck($email){
     return filter_var($email, FILTER_VALIDATE_EMAIL);
 }
+
+function PasswordCheck($pw){
+    $pattern = '/^(?=.*[!@#$%^&*-])(?=.*[0-9])(?=.*[A-Z]).{8,20}$/';
+    return preg_match($pattern, $pw);
+}
