@@ -46,25 +46,13 @@ class Garazs extends AProperty
 
     public function GetData(): array
     {
-        $data = array(
-            'id' => $this->id,
-            'property_type' => "garazs",
-            'subtype' => $this-> subtype,
-            'ar' => $this->ar,
-            'alapterulet' => $this->alapterulet
-        );
+        $data = array('id' => $this->id, 'property_type' => "garázs", 'subtype' => $this-> subtype, 'ar' => $this->ar, 'alapterulet' => $this->alapterulet);
         return $data;
     }
 
     public function GetAllData(): array
     {
-        $data = array('id' => $this->id,
-            'property_type' => "garazs",
-            'subtype' => $this->subtype,
-            'ar' => $this->ar,
-            'alapterulet' => $this->alapterulet,
-            'allapot' => $this->allapot
-        );
+        $data = array('id' => $this->id, 'property_type' => "garázs", 'subtype' => $this->subtype, 'ar' => $this->ar, 'alapterulet' => $this->alapterulet, 'allapot' => $this->allapot);
         return $data;
     }
 
