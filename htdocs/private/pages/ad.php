@@ -55,7 +55,46 @@
                         <input type="radio" name="van_pince vagy nincs" id="van_pince vagy nincs" value="to_rent">
                         <label class="form-check-label" for="van_pince vagy nincs">Igen</label>
                     </div>
-                </div>
+    </div>
+    <div class="form-group h5">
+    <label class="p-2" for="number_floor">*Rendelkezik kilátással?</label><br>
+    </div>
+    <div class="row col-lg-2 text-center h5 p-2">
+                    <div class="form-check">
+                        <input type="radio" name="" id="view_or_not" value="no" checked>
+                        <label class="form-check-label" for="view_or_not">Nem</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="view_or_not" id="view_or_not" value="yes">
+                        <label class="form-check-label" for="view_or_not">Igen</label>
+                    </div>
+     </div>
+     <div class="form-group h5">
+      <label class="p-2" for="number_floor">*Rendelkezik kerttel?</label><br>
+     </div>
+     <div class="row col-lg-2 text-center h5 p-2">
+                    <div class="form-check">
+                        <input type="radio" name="garden_or_not" id="garden_or_not" value="no" checked>
+                        <label class="form-check-label" for="garden_or_not">Nem</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="garden_or_not" id="garden_or_not" value="yes">
+                        <label class="form-check-label" for="garden_or_not">Igen</label>
+                    </div>
+     </div>
+     <div class="form-group h5">
+      <label class="p-2" for="number_floor">*Rendelkezik lifttel?</label><br>
+     </div>
+     <div class="row col-lg-2 text-center h5 p-2">
+                    <div class="form-check">
+                        <input type="radio" name="elevator_or_not" id="elevator_or_not" value="no" checked>
+                        <label class="form-check-label" for="elevator_or_not">Nem</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="elevator_or_not" id="elevator_or_not" value="yes">
+                        <label class="form-check-label" for="elevator_or_not">Igen</label>
+                    </div>
+     </div>
  </fieldset>
   </br>
   <input class="btn btn-primary btn-md h5" name="submit" id="submit" type="submit" value="Küldés">
