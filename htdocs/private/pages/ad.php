@@ -95,6 +95,90 @@
                         <label class="form-check-label" for="elevator_or_not">Igen</label>
                     </div>
      </div>
+
+     <div class="form-group h5">
+      <label class="p-2" for="number_floor">*Rendelkezik parkolóval?</label><br>
+     </div>
+     <div class="row col-lg-2 text-center h5 p-2">
+                    <div class="form-check">
+                        <input type="radio" name="parking_or_not" id="parking_or_not" value="no" checked>
+                        <label class="form-check-label" for="parking_or_not">Nem</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="parking_or_not" id="parking_or_not" value="yes">
+                        <label class="form-check-label" for="parking_or_not">Igen</label>
+                    </div>
+     </div>
+
+     <div class="form-group h5">
+      <label class="p-2" for="number_floor">*Rendelkezik terasszal?</label><br>
+     </div>
+     <div class="row col-lg-2 text-center h5 p-2">
+                    <div class="form-check">
+                        <input type="radio" name="balcony_or_not" id="balcony_or_not" value="no" checked>
+                        <label class="form-check-label" for="balcony_or_not">Nem</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="balcony_or_not" id="balcony_or_not" value="yes">
+                        <label class="form-check-label" for="balcony_or_not">Igen</label>
+                    </div>
+     </div>
+
+     <div class="form-group h5">
+      <label class="p-2" for="number_floor">*Mozgáskorlátozottak számára megközelíthető?</label><br>
+     </div>
+     <div class="row col-lg-2 text-center h5 p-2">
+                    <div class="form-check">
+                        <input type="radio" name="wheelchair_or_not" id="wheelchair_or_not" value="no" checked>
+                        <label class="form-check-label" for="wheelchair_or_not">Nem</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="wheelchair_or_not" id="wheelchair_or_not" value="yes">
+                        <label class="form-check-label" for="wheelchair_or_not">Igen</label>
+                    </div>
+     </div>
+
+     <div class="form-group h5">
+      <label class="p-2" for="number_floor">*Rendelkezik légkondícionálóval?</label><br>
+     </div>
+     <div class="row col-lg-2 text-center h5 p-2">
+                    <div class="form-check">
+                        <input type="radio" name="air_or_not" id="air_or_not" value="no" checked>
+                        <label class="form-check-label" for="air_or_not">Nem</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="air_or_not" id="air_or_not" value="yes">
+                        <label class="form-check-label" for="air_or_not">Igen</label>
+                    </div>
+     </div>
+
+     <div class="form-group h5">
+     <label class="p-2" for="number_floor">*Rendelkezik tetőtérrel?</label><br>
+     </div>
+     <div class="row col-lg-2 text-center h5 p-2">
+                    <div class="form-check">
+                        <input type="radio" name="attic_or_not" id="attic_or_not" value="no" checked>
+                        <label class="form-check-label" for="attic_or_not">Nem</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="attic_or_not" id="attic_or_not" value="yes">
+                        <label class="form-check-label" for="attic_or_not">Igen</label>
+                    </div>
+     </div>
+
+     <div class="form-group h5">
+     <label class="p-2" for="number_floor">*Beéjthető a tetőtér?</label><br>
+     </div>
+     <div class="row col-lg-2 text-center h5 p-2">
+                    <div class="form-check">
+                        <input type="radio" name="attic_build_or_not" id="attic_build_or_not" value="no" checked>
+                        <label class="form-check-label" for="attic_build_or_not">Nem</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="attic_build_or_not" id="attic_build_or_not" value="yes">
+                        <label class="form-check-label" for="attic_build_or_not">Igen</label>
+                    </div>
+     </div>
  </fieldset>
   </br>
   <input class="btn btn-primary btn-md h5" name="submit" id="submit" type="submit" value="Küldés">
