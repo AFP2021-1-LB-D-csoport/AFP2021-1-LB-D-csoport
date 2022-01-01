@@ -44,6 +44,49 @@
                     </select>
     </div>
     <div class="form-group h5">
+      <label class="p-2" for="hszám">*Ingatlan építőanyagának típusa:</label><br> 
+    </div>     
+    <div class="form-group h5 col-lg-2 p-2">
+                    <select id="property_subtype" name="property_subtype" class="p-1">
+                    <option selected>Tégla</option>
+                    <option>Vályog</option>
+                    <option>Panel</option>
+                    <option>Lemez</option>
+                    <option>Csúsztatott zsalus</option>
+                    <option>Vert falas</option>
+                    <option>Vegyes</option>
+                    </select>
+    </div>
+    <div class="form-group h5">
+      <label class="p-2" for="hszám">*Ingatlan állapota:</label><br> 
+    </div> 
+    <div class="form-group h5 col-lg-2 p-2">
+                    <select id="property_condition" name="property_condition" class="p-1">
+                    <option selected>Újépítésű</option>
+                    <option>Felújítandó</option>
+                    <option>Felújított</option>
+                    <option>Közepes állapotú</option>
+                    <option>Befejezetlen</option>
+                    <option>Újszerű</option>
+                    <option>közepes állapotú</option>
+                    </select>
+    </div>
+    <div class="form-group h5">
+      <label class="p-2" for="hszám">*Ingatlan tájolása:</label><br> 
+    </div> 
+    <div class="form-group h5 col-lg-2 p-2">
+                    <select id="property_orient" name="property_orient" class="p-1">
+                    <option selected>Észak</option>
+                    <option>Dél</option>
+                    <option>Kelet</option>
+                    <option>Nyugat</option>
+                    <option>Dél-Nyugat</option>
+                    <option>Dél-Kelet</option>
+                    <option>Észak-Nyugat</option>
+                    <option>Észak-Kelet</option>
+                    </select>
+    </div>
+    <div class="form-group h5">
       <label class="p-2" for="number_floor">*Rendelkezik pincével?:</label><br>
     </div>
     <div class="row col-lg-2 text-center h5 p-2">
@@ -167,7 +210,7 @@
      </div>
 
      <div class="form-group h5">
-     <label class="p-2" for="number_floor">*Beéjthető a tetőtér?</label><br>
+     <label class="p-2" for="number_floor">*Beépíthető a tetőtér?</label><br>
      </div>
      <div class="row col-lg-2 text-center h5 p-2">
                     <div class="form-check">
