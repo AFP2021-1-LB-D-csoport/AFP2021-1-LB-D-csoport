@@ -86,6 +86,37 @@
                     <option>Észak-Kelet</option>
                     </select>
     </div>
+
+    <div class="form-group h5">
+      <label class="p-2" for="hszám">*Fűtés típusa:</label><br> 
+    </div> 
+    <div class="form-group h5 col-lg-2 p-2">
+                    <select id="property_heat" name="property_heat" class="p-1">
+                    <option selected>Távhő</option>
+                    <option>Vegyestüzelésű</option>
+                    <option>Gáz(cirkó)</option>
+                    <option>Gáz(konvektor)</option>
+                    <option>Elektromos</option>
+                    <option>Távfűtés</option>
+                    <option>Hőszivattyú</option>
+                    <option>Cserépkályha</option>
+                    </select>
+    </div>
+    <div class="form-group h5">
+      <label class="p-2" for="hszám">*Ingatlan komforszintje:</label><br> 
+    </div> 
+    <div class="form-group h5 col-lg-2 p-2">
+                    <select id="property_comf" name="property_comf" class="p-1">
+                    <option selected>Összkomfortos</option>
+                    <option>Luxus</option>
+                    <option>Duplakomfortos</option>
+                    <option>Félkomfortos</option>
+                    <option>Komfortos</option>
+                    <option>Komfort nélküli</option>
+                    
+                    </select>
+    </div>
+
     <div class="form-group h5">
       <label class="p-2" for="number_floor">*Rendelkezik pincével?:</label><br>
     </div>
@@ -220,6 +251,84 @@
                     <div class="form-check">
                         <input type="radio" name="attic_build_or_not" id="attic_build_or_not" value="yes">
                         <label class="form-check-label" for="attic_build_or_not">Igen</label>
+                    </div>
+     </div>
+     <div class="form-group h5">
+     <label class="p-2" for="number_floor">*Rendelkezik különálló toilettel?</label><br>
+     </div>
+     <div class="row col-lg-2 text-center h5 p-2">
+                    <div class="form-check">
+                        <input type="radio" name="wc_or_not" id="wc_or_not" value="no" checked>
+                        <label class="form-check-label" for="wc_or_not">Nem</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="wc_or_not" id="wc_or_not" value="yes">
+                        <label class="form-check-label" for="wc_or_not">Igen</label>
+                    </div>
+     </div>
+     <div class="form-group h5">
+     <label class="p-2" for="number_floor">*Rendelkezik különálló toilettel?</label><br>
+     </div>
+     <div class="row col-lg-2 text-center h5 p-2">
+                    <div class="form-check">
+                        <input type="radio" name="wc_or_not" id="wc_or_not" value="no" checked>
+                        <label class="form-check-label" for="wc_or_not">Nem</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="wc_or_not" id="wc_or_not" value="yes">
+                        <label class="form-check-label" for="wc_or_not">Igen</label>
+                    </div>
+     </div>
+     <div class="form-group h5">
+     <label class="p-2" for="number_floor">*Rendelkezik az ingatlan elektromos hálózattal?</label><br>
+     </div>
+     <div class="row col-lg-2 text-center h5 p-2">
+                    <div class="form-check">
+                        <input type="radio" name="electric_or_not" id="eletric_or_not" value="no" checked>
+                        <label class="form-check-label" for="electric_or_not">Nem</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="electric_or_not" id="electric_or_not" value="yes">
+                        <label class="form-check-label" for="electric_or_not">Igen</label>
+                    </div>
+     </div>
+     <div class="form-group h5">
+     <label class="p-2" for="number_floor">*Rendelkezik az ingatlan  vízhálózattal?</label><br>
+     </div>
+     <div class="row col-lg-2 text-center h5 p-2">
+                    <div class="form-check">
+                        <input type="radio" name="water_or_not" id="water_or_not" value="no" checked>
+                        <label class="form-check-label" for="water_or_not">Nem</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="water_or_not" id="water_or_not" value="yes">
+                        <label class="form-check-label" for="water_or_not">Igen</label>
+                    </div>
+     </div>
+     <div class="form-group h5">
+     <label class="p-2" for="number_floor">*Rendelkezik az ingatlan gázhálózattal?</label><br>
+     </div>
+     <div class="row col-lg-2 text-center h5 p-2">
+                    <div class="form-check">
+                        <input type="radio" name="gas_or_not" id="gas_or_not" value="no" checked>
+                        <label class="form-check-label" for="gas_or_not">Nem</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="gas_or_not" id="gas_or_not" value="yes">
+                        <label class="form-check-label" for="gas_or_not">Igen</label>
+                    </div>
+     </div>
+     <div class="form-group h5">
+     <label class="p-2" for="number_floor">*Rendelkezik az ingatlan szennyvízhálózattal?</label><br>
+     </div>
+     <div class="row col-lg-2 text-center h5 p-2">
+                    <div class="form-check">
+                        <input type="radio" name="pipe_or_not" id="pipe_or_not" value="no" checked>
+                        <label class="form-check-label" for="pipe_or_not">Nem</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="pipe_or_not" id="pipe_or_not" value="yes">
+                        <label class="form-check-label" for="pipe_or_not">Igen</label>
                     </div>
      </div>
  </fieldset>
