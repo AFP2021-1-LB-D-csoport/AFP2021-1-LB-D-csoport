@@ -28,6 +28,30 @@
       <label class="p-2" for="number_floor">*Szintek száma:</label><br>
       <input class="form-control mb-3" type="number" id="number_floor" name="number_floor" required>
     </div>
+    <div class="form-group h5">
+      <label class="p-2" for="price">*Szobák átlagos mérete:</label><br>
+      <input class="form-control" type="number" id="avg_size" name="avg_size" required>
+    </div>
+    <div class="form-group h5">
+      <label class="p-2" for="price">*Ingatlan területe:</label><br>
+      <input class="form-control" type="number" id="property_size" name="property_size" required>
+    </div>
+    <div class="form-group h5">
+      <label class="p-2" for="price">*Szobák száma:</label><br>
+      <input class="form-control" type="number" id="number_rooms" name="number_rooms" required>
+    </div>
+    <div class="form-group h5">
+      <label class="p-2" for="price">*Félszobák száma:</label><br>
+      <input class="form-control" type="number" id="number_halfrooms" name="number_halfrooms" required>
+    </div>
+    <div class="form-group h5">
+      <label class="p-2" for="price">*Fürdőszobák száma:</label><br>
+      <input class="form-control" type="number" id="number_bathrooms" name="number_bathrooms" required>
+    </div>
+    <div class="form-group h5">
+      <label class="p-2" for="price">*Telek mérete:</label><br>
+      <input class="form-control" type="number" id="size_plot" name="size_plot" required>
+    </div>
     <form action="http://localhost/AFP2021-1-LB-D-csoport/htdocs/index.php?p=real-estates&m=enlist" method="post">
     <div class="form-group h5">
       <label class="p-2" for="hszám">*Ingatlan típusa:</label><br> 
