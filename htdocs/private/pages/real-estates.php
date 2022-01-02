@@ -36,3 +36,11 @@ function enlist(){
     $result = select($query);
     require_once REAL_ESTATES_DIR.'list.php';
 }
+
+function add(){
+    if (!filter_has_var(INPUT_POST, 'addAd')){
+        require REAL_ESTATES_DIR.'add.php';
+    } else {
+        
+    }
+}
