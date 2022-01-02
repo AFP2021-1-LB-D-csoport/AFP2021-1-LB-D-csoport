@@ -34,8 +34,8 @@ function registration(){
     if (!filter_has_var(INPUT_POST, 'submit')){
         require USERS_DIR.'registration.php';
     } else {
-        //$id = select('SELECT MAX(profile_id) FROM profile');
-        //$id = $id + 1;
+        $id = select('SELECT MAX(profile_id) FROM profile');
+        $id = $id + 1;
         $username = filter_input(INPUT_POST, 'username');
         $email = filter_input(INPUT_POST, 'email');
         $date = '2021-12-19';
@@ -50,5 +50,37 @@ function registration(){
 }
 
 function settings() {
-    echo 'Ide jön a profil beállítások rész';
+    require USERS_DIR.'settings.php';
+}
+
+function edit_name() {
+    if (!filter_has_var(INPUT_POST, 'edit_name')){
+        require USERS_DIR.'edit_name.php';
+    } else {
+        
+    }
+}
+
+function edit_email() {
+    if (!filter_has_var(INPUT_POST, 'edit_email')){
+        require USERS_DIR.'edit_email.php';
+    } else {
+        
+    }
+}
+
+function edit_phone() {
+    if (!filter_has_var(INPUT_POST, 'edit_phone')){
+        require USERS_DIR.'edit_phone.php';
+    } else {
+        
+    }
+}
+
+function change_password() {
+    if (!filter_has_var(INPUT_POST, 'change_password')){
+        require USERS_DIR.'change_password.php';
+    } else {
+        
+    }
 }
