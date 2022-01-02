@@ -7,7 +7,7 @@
   if (isset($_SESSION['user'])){
     $menu[] = ['href' => '?p=users&m=settings', 'title' => $_SESSION['user']['user_name']];
     $menu[] = ['href' => '?p=users&m=logout', 'title' => 'Kijelentkezés'];
-    $menu[] = ['href' => '?p=ad', 'title' => 'Hirdetés feladása'];
+    $menu[] = ['href' => '?p=real-estates&m=add', 'title' => 'Hirdetés feladása'];
     $menu[] = ['href' => '?p=real-estates&m=my_ads', 'title' => 'Saját hirdetéseim'];
   } else {
     $menu[] = ['href' => '?p=users&m=registration', 'title' => 'Regisztráció'];
