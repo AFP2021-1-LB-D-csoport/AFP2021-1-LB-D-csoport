@@ -201,6 +201,7 @@ CREATE TABLE realtor (
     email_address VARCHAR2(100),
     photo_file    VARCHAR2(800),
     work_end_date DATE,
+    PWD           VARCHAR2(100),
     CONSTRAINT realtor_pk PRIMARY KEY ( realtor_id )
 );
 
