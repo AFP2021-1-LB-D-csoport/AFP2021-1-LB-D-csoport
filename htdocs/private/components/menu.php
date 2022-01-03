@@ -5,7 +5,12 @@
 <?php
 
   if (isset($_SESSION['user'])){
-    $menu[] = ['href' => '?p=users&m=settings', 'title' => $_SESSION['user']['user_name']];
+    if ($_SESSION['user']['realtor_id'] !== NULL) {
+      $menu[] = ['href' => '?p=admin', 'title' => 'Admin felület'];
+      $menu[] = ['href' => '?p=users&m=settings', 'title' => $_SESSION['user']['first_name']];
+    } else {
+      $menu[] = ['href' => '?p=users&m=settings', 'title' => $_SESSION['user']['user_name']];
+    }
     $menu[] = ['href' => '?p=users&m=logout', 'title' => 'Kijelentkezés'];
     $menu[] = ['href' => '?p=real-estates&m=add', 'title' => 'Hirdetés feladása'];
     $menu[] = ['href' => '?p=real-estates&m=my_ads', 'title' => 'Saját hirdetéseim'];
