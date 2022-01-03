@@ -202,6 +202,7 @@ CREATE TABLE realtor (
     email_address VARCHAR(100),
     photo_file    VARCHAR(800),
     work_end_date DATE,
+    PWD           VARCHAR(100),
     PRIMARY KEY ( realtor_id )
 );
 
