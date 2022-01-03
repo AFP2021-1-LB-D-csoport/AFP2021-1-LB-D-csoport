@@ -130,7 +130,3 @@ function change_password() {
         }
     }
 }
-
-function send_email() {
-    mail('teregudi.tamashi@gmail.com', 'subject', 'haha');
-}
