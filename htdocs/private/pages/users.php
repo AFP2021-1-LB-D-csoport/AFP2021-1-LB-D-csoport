@@ -20,7 +20,22 @@ function login(){
         if ($success){
             header('Location: '.BASE_URL);
         } else {
-            echo 'Helytelen email cím vagy jelszó!';
+            $realtors = select('SELECT * FROM realtor');
+            $email = filter_input(INPUT_POST, 'email');
+            $password = filter_input(INPUT_POST, 'password');
+            $success = false;
+            foreach ($realtors as &$realtor){
+                if ($realtor['email_address']===$email && $realtor['pwd']===$password){
+                    $_SESSION['user'] = $realtor;
+                    $success = true;
+                    break;
+                }
+            }
+            if ($success){
+                header('Location: '.BASE_URL);
+            } else {
+                echo 'Helytelen email cím vagy jelszó!';
+            }
         }
     }
 }
@@ -129,4 +144,12 @@ function change_password() {
             echo 'Sikertelen módosítás.';
         }
     }
+}
+
+function delete_user() {
+    $id = filter_input(INPUT_GET, 'd');
+    $success = delete('DELETE FROM admin WHERE profile_id = :id', ['id' => $id]);
+    $success = delete('DELETE FROM profile WHERE profile_id = :id', ['id' => $id]);
+    if ($success) echo "Felhasználó törölve az adatbázisból.";
+    else echo "Felhasználó törlése sikertelen.";
 }
