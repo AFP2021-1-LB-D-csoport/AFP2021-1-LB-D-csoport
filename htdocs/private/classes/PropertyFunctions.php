@@ -186,3 +186,22 @@ function GetAllTelek()
     }
     return $telkek;
 }
+
+function GetAllRaktar()
+{
+    $query = "SELECT property_description.property_id, property_description.property_sub_type, property_description.property_price, property_description.property_size, property_description.plot_size,
+                            property_description.property_condition, property.date_on_market, property.status, property.property_type_id FROM property_description INNER JOIN property ON property_description.property_id = property.property_id
+                            WHERE property_description.property_type = 'RAKT';";
+    $result = select($query, false, null);
+    $raktarak = array();
+    $i = 0;
+    foreach ($result as $r) {
+        $raktar = new Raktar(intval($r[0]), $r[1], intval($r[2]), intval($r[3]), intval($r[4]), $r[5]);
+        $raktar->dateOnMarket = $r[6];
+        $raktar->status = $r[7];
+        $raktar->tipus = $r[8];
+        $raktarak[$i] = $raktar;
+        $i++;
+    }
+    return $raktarak;
+}
