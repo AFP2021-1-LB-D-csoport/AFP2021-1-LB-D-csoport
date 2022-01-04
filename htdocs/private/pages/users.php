@@ -11,7 +11,7 @@ function login(){
         $password = filter_input(INPUT_POST, 'password');
         $success = false;
         foreach ($users as &$user){
-            if ($user['email_address']===$email && $user['pwd']===$password){
+            if ($user['email_address']===$email && $user['pwd']===$password && $user['status'] !== 'DELETED'){
                 $_SESSION['user'] = $user;
                 $success = true;
                 break;
@@ -148,8 +148,7 @@ function change_password() {
 
 function delete_user() {
     $id = filter_input(INPUT_GET, 'd');
-    $success = delete('DELETE FROM admin WHERE profile_id = :id', ['id' => $id]);
-    $success = delete('DELETE FROM profile WHERE profile_id = :id', ['id' => $id]);
+    $success = delete("UPDATE profile SET status = 'DELETED' WHERE profile_id = :id", ['id' => $id]);
     if ($success) echo "Felhasználó törölve az adatbázisból.";
     else echo "Felhasználó törlése sikertelen.";
 }
