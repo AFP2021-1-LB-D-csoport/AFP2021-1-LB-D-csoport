@@ -227,3 +227,23 @@ function GetAllGarazs()
     }
     return $garazsok;
 }
+
+function GetAllIroda()
+{
+    $query = "SELECT property_description.property_id, property_description.property_sub_type, property_description.property_price, property_description.property_size, property_description.property_condition, property_description.attic_loft,
+                                property_description.floor_number, property_description.elevator, property_description.balcony_patio, property_description.safe_for_wheelchair, property_description.airconditioning, property.date_on_market, property.status, property.property_type_id 
+                                FROM property_description INNER JOIN property ON property_description.property_id = property.property_id
+                                WHERE property_description.property_type = 'UZL';";
+    $result = select($query, false, null);
+    $irodak = array();
+    $i = 0;
+    foreach ($result as $r) {
+        $iroda = new Iroda(intval($r[0]), $r[1], intval($r[2]), intval($r[3]), $r[4], $r[5], intval($r[6]), $r[7], $r[8], $r[9], $r[10]);
+        $iroda->dateOnMarket = $r[11];
+        $iroda->status = $r[12];
+        $iroda->tipus = $r[13];
+        $irodak[$i] = $iroda;
+        $i++;
+    }
+    return $irodak;
+}
