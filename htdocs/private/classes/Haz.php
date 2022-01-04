@@ -7,15 +7,14 @@ class Haz extends AProperty
                          int $szobakszama, int $felszobakszama, int $furdoszobak_szama, int $telekterulet, int $szintekszama, string $pince, string $padlas)
     {
         $this->id = $id;
-        $this->subtype = $this->GetSubtypeById($subtype);
-
-        $this->allapot = $this->GetAllopotDescById($allapot);
-        $this->kilatas = $this->GetViewTypeDescById($kilatas);
-        $this->futes = $this->GetHeatingTypeDescById($futes);
-        $this->parkolas = $this->GetParkingTypeDescById($parkolas);
-        $this->komfort = $this->GetComfortTypeDescById($komfort);
-        $this->atticType = $this->GetAtticDescById($atticType);
-        $this->furdoEsWC = $this->GetFurdoTypeDescById($furdoEsWC);
+        $this->subtype = GetSubtypeById($subtype);
+        $this->allapot = GetAllopotDescById($allapot);
+        $this->kilatas = GetViewTypeDescById($kilatas);
+        $this->futes = GetHeatingTypeDescById($futes);
+        $this->parkolas = GetParkingTypeDescById($parkolas);
+        $this->komfort = GetComfortTypeDescById($komfort);
+        $this->atticType = GetAtticDescById($atticType);
+        $this->furdoEsWC = GetFurdoTypeDescById($furdoEsWC);
         $this->erkely = $erkely;
         $this->akadalymentes = $akadalymentes;
         $this->legkondi = $legkondi;
@@ -97,29 +96,30 @@ class Haz extends AProperty
     {
         $data = array(
             'id' => $this->id,
-            'property_type' => "NYARALO",
-            'subtype' => $this-> subtype,
+            'property_type' => "HAZ",
+            'subtype' => $this->subtype,
             'ar' => $this->ar,
-            'alapterulet' => $this->alapterulet
+            'alapterulet' => $this->alapterulet,
+            'telekterulet' => $this->telekterulet
         );
         return $data;
     }
 
     public function GetAllData(): array
     {
-        $type = $this->GetTypeId();
-        $subtype = $this->GetSubtypeId();
-        $atticType = $this->GetAtticIdByDesc($this->atticType);
-        $parkolas = $this->GetParkingTypeIdByDesc($this->parkolas);
-        $heatingType = $this->GetHeatingTypeIdByDesc($this->futes);
-        $kilatas = $this->GetViewTypeIdByDesc($this->kilatas);
-        $komfort = $this->GetComfortTypeIdByDesc($this->komfort);
-        $furdoEsWc = $this->GetFurdoTypeIdByDesc($this->furdoEsWC);
+        $type = GetTypeId("HAZ");
+        $subtype = GetSubtypeId($this->subtype);
+        $atticType = GetAtticIdByDesc($this->atticType);
+        $parkolas = GetParkingTypeIdByDesc($this->parkolas);
+        $heatingType = GetHeatingTypeIdByDesc($this->futes);
+        $kilatas = GetViewTypeIdByDesc($this->kilatas);
+        $komfort = GetComfortTypeIdByDesc($this->komfort);
+        $furdoEsWc = GetFurdoTypeIdByDesc($this->furdoEsWC);
         $data = array(
             'id' => $this->id,
             'type' => $type,
             'subtype' => $subtype,
-            'allapot' => $this->GetAllapotIdByDesc($this->allapot),
+            'allapot' => GetAllapotIdByDesc($this->allapot),
             'kilatas' => $kilatas,
             'futes' => $heatingType,
             'parkolas' => $parkolas,
@@ -140,129 +140,6 @@ class Haz extends AProperty
             'padlas' => $this->padlas
         );
         return $data;
-    }
-
-    private function GetAllopotDescById($allapot){
-        $result = (select( "SELECT property_condition_desc FROM property_conditions WHERE property_condition_code = '".$allapot."';",true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetAllapotIdByDesc($allapot){
-        $result = (select( "SELECT property_condition_code FROM property_conditions WHERE property_condition_desc = '".$allapot."';",true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetTypeId()
-    {
-        $result = (select( "SELECT property_type_code FROM property_types WHERE property_type_desc = 'HAZ';", true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetSubtypeId()
-    {
-        $result = (select( "SELECT property_sub_type_code FROM property_sub_types WHERE property_sub_type_desc = '".$this->subtype."';", true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetSubtypeById($subtype_id)
-    {
-        $result = (select( "SELECT property_sub_type_desc FROM property_sub_types WHERE property_sub_type_code = '".$subtype_id."';", true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetAtticDescById($atticId){
-        $result = (select( "SELECT attic_type_desc FROM attic_types WHERE attic_type_code = '".$atticId."';", true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetAtticIdByDesc($atticDesc){
-        $result = (select( "SELECT attic_type_code FROM attic_types WHERE attic_type_desc = '".$atticDesc."';", true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-
-    private function GetHeatingTypeDescById($heating){
-        $result = (select( "SELECT heating_type_desc FROM property_heatings WHERE heating_type_code = '".$heating."';", true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetHeatingTypeIdByDesc($heating){
-        $result = (select( "SELECT heating_type_code FROM property_heatings WHERE heating_type_desc = '".$heating."';", true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetViewTypeDescById($view){
-        $result = (select( "SELECT property_view_desc FROM property_views WHERE property_view_code = '".$view."';", true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetViewTypeIdByDesc($view){
-        $result = (select( "SELECT property_view_code FROM property_views WHERE property_view_desc = '".$view."';", true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetFurdoTypeDescById($furdo){
-        $result = (select( "SELECT bathroom_toilet_type_desc FROM bathroom_toilet_types WHERE bathroom_toilet_type_code = '".$furdo."';", true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetFurdoTypeIdByDesc($furdo){
-        $result = (select( "SELECT bathroom_toilet_type_code FROM bathroom_toilet_types WHERE bathroom_toilet_type_desc = '".$furdo."';", true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetParkingTypeDescById($parking){
-        $result = (select( "SELECT parking_type_desc FROM parking_types WHERE parking_type_code = '".$parking."';", true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetParkingTypeIdByDesc($parking){
-        $result = (select( "SELECT parking_type_code FROM parking_types WHERE parking_type_desc = '".$parking."';", true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetComfortTypeDescById($comfort){
-        $result = (select( "SELECT comfort_type_desc FROM property_comfort_types WHERE comfort_type_code = '".$comfort."';", true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetComfortTypeIdByDesc($comfort){
-        $result = (select( "SELECT comfort_type_code FROM property_comfort_types WHERE comfort_type_desc = '".$comfort."';", true, null));
-        foreach ($result as $r){
-            return $r;
-        }
     }
 
 }
