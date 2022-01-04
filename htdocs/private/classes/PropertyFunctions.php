@@ -205,3 +205,25 @@ function GetAllRaktar()
     }
     return $raktarak;
 }
+
+function GetAllGarazs()
+{
+    $query = "SELECT property_description.property_id, property_description.property_sub_type, property_description.property_price, property_description.property_size, property_description.property_condition,
+                            property.date_on_market, property.status, property.property_type_id FROM property_description INNER JOIN property ON property_description.property_id = property.property_id
+                            WHERE property_description.property_type = 'GAR';";
+    $result = select($query,false, null);
+    $garazsok = array();
+    $i=0;
+    foreach ($result as $r){
+        foreach ($r as $adat){
+            echo $adat . ' ';
+        }
+        $garazs = new Garazs(intval($r[0]), $r[1], intval($r[2]), intval($r[3]), $r[4]);
+        $garazs->dateOnMarket = $r[5];
+        $garazs->status = $r[6];
+        $garazs->tipus = $r[7];
+        $garazsok[$i] = $garazs;
+        $i++;
+    }
+    return $garazsok;
+}
