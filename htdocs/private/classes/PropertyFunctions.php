@@ -247,3 +247,25 @@ function GetAllIroda()
     }
     return $irodak;
 }
+
+function GetAllNyaralo()
+{
+    $query = "SELECT property_description.property_id, property_description.property_sub_type, property_description.property_price, property_description.property_size, property_description.property_condition, 
+                                property_description.property_view, property_description.heating_type, property_description.attic_loft, property_description.balcony_patio, property_description.safe_for_wheelchair, property_description.airconditioning,
+                                property_description.num_of_whole_rooms, property_description.num_of_half_rooms, property_description.num_of_bathrooms, property_description.plot_size, property_description.electricity, property_description.water, property_description.gas, 
+                                property_description.pipage, property.date_on_market, property.status, property.property_type_id 
+                                FROM property_description INNER JOIN property ON property_description.property_id = property.property_id
+                                WHERE property_description.property_type = 'NYAR';";
+    $result = select($query, false, null);
+    $nyaralok = array();
+    $i = 0;
+    foreach ($result as $r) {
+        $nyaralo = new Nyaralo(intval($r[0]), $r[1], intval($r[2]), intval($r[3]), $r[4], $r[5], $r[6], $r[7], $r[8], $r[9], $r[10], intval($r[11]), intval($r[12]), intval($r[13]), intval($r[14]), $r[15], $r[16], $r[17], $r[18]);
+        $nyaralo->dateOnMarket = $r[19];
+        $nyaralo->status = $r[20];
+        $nyaralo->tipus = $r[21];
+        $nyaralok[$i] = $nyaralo;
+        $i++;
+    }
+    return $nyaralok;
+}
