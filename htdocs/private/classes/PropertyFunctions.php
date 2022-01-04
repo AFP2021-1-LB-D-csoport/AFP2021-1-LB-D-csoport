@@ -167,3 +167,22 @@ function GetOrientationTypeIdByDesc($orientation){
         return $r;
     }
 }
+
+function GetAllTelek()
+{
+    $query = "SELECT property_description.property_id, property_description.property_sub_type, property_description.property_price, property_description.plot_size, property_description.electricity,
+                        property_description.water, property_description.gas, property_description.pipage, property.date_on_market, property.status, property.property_type_id FROM property_description INNER JOIN property ON property_description.property_id = property.property_id
+                        WHERE property_description.property_type = 'TELEK';";
+    $result = select($query,false, null);
+    $telkek = array();
+    $i=0;
+    foreach ($result as $r){
+        $telek = new Telek(intval($r[0]), $r[1], intval($r[2]), intval($r[3]), $r[4], $r[5], $r[6], $r[7]);
+        $telek->dateOnMarket = $r[8];
+        $telek->status = $r[9];
+        $telek->tipus = $r[10];
+        $telkek[$i] = $telek;
+        $i++;
+    }
+    return $telkek;
+}
