@@ -268,4 +268,28 @@ function GetAllNyaralo()
         $i++;
     }
     return $nyaralok;
+
+function GetAllLakas()
+{
+    $query = "SELECT property_description.property_id, property_description.property_sub_type, property_description.property_condition, property_description.property_view, property_description.orientation, property_description.heating_type, 
+                            property_description.parking, property_description.comfort_rate, property_description.attic_loft, property_description.bathroom_toilet, property_description.floor_number, property_description.avg_room_height,
+                            property_description.elevator, property_description.balcony_patio, property_description.safe_for_wheelchair, property_description.airconditioning, property_description.garden, 
+                            property_description.property_price, property_description.property_size,  property_description.num_of_whole_rooms, property_description.num_of_half_rooms, property_description.num_of_bathrooms, property_description.stairs,
+                            property.date_on_market, property.status, property.property_type_id 
+                            FROM property_description INNER JOIN property ON property_description.property_id = property.property_id
+                            WHERE property_description.property_type = 'LAK';";
+
+    $result = select($query, false, null);
+    $lakasok = array();
+    $i = 0;
+    foreach ($result as $r) {
+        $lakas = new Lakas( intval($r[0]), $r[1], $r[2], $r[3], $r[4], $r[5], $r[6], $r[7], $r[8], $r[9], intval($r[10]), floatval($r[11]), $r[12], $r[13], $r[14], $r[15], $r[16], intval($r[17]), intval($r[18]), intval($r[19]), intval($r[20]), intval($r[21]), $r[22]);
+        $lakas->dateOnMarket = $r[23];
+        $lakas->status = $r[24];
+        $lakas->tipus = $r[25];
+        $lakasok[$i] = $lakas;
+        $i++;
+    }
+    return $lakasok;
+}
 }
