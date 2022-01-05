@@ -5,11 +5,11 @@ class Raktar extends AProperty
     function __construct(int $id, string $subtype, int $ar, int $alapterulet, int $telekterulet, string $allapot)
     {
         $this->id = $id;
-        $this->subtype = $this->GetSubtypeById($subtype);
+        $this->subtype = GetSubtypeById($subtype);
         $this->ar = $ar;
         $this->alapterulet = $alapterulet;
         $this->telekterulet = $telekterulet;
-        $this->allapot = $this->GetAllopotDescById($allapot);
+        $this->allapot = GetAllopotDescById($allapot);
     }
 
     public $alapterulet;
@@ -18,32 +18,24 @@ class Raktar extends AProperty
 
     public function SaveToDescription()
     {
-        $type = $this->GetTypeId();
-        $subtype = $this->GetSubtypeId($this->subtype);
         $query = "INSERT INTO property_description(property_id, property_type, property_sub_type, property_price, property_size, property_condition, plot_size) VALUES (:id, :type, :subtype, :ar, :terulet, :allapot, :telekterulet);";
-        $data = array(
-            'id' => $this->id,
-            'type' => $type,
-            'subtype' => $subtype,
-            'ar' => $this->ar,
-            'terulet' => $this->alapterulet,
-            'allapot' => $this->GetAllapotIdByDesc($this->allapot),
-            'telekterulet' => $this->telekterulet
-        );
+
+        $data = $this->GetAllData();
+
         insert_into($query, $data);
     }
 
     public function UpdateOnDesc()
     {
-        $subtype = $this->GetSubtypeId($this->subtype);
+        $alldata = $this->GetAllData();
         $query = "UPDATE property_description SET property_sub_type = :subtype, property_price = :ar, property_size = :terulet, property_condition = :allapot, plot_size = :telekterulet WHERE property_id = :id;";
         $data = array(
-            'id' => $this->id,
-            'subtype' => $subtype,
-            'ar' => $this->ar,
-            'terulet' => $this->alapterulet,
-            'allapot' => $this->GetAllapotIdByDesc($this->allapot),
-            'telekterulet' => $this->telekterulet
+            'id' => $alldata['id'],
+            'subtype' => $alldata['subtype'],
+            'ar' => $alldata['ar'],
+            'terulet' => $alldata['terulet'],
+            'allapot' => $alldata['allapot'],
+            'telekterulet' => $alldata['telekterulet']
         );
         update($query, $data);
     }
@@ -63,53 +55,17 @@ class Raktar extends AProperty
 
     public function GetAllData(): array
     {
+        $type = GetTypeId("RAKTAR");
+        $subtype = GetSubtypeId($this->subtype);
         $data = array(
             'id' => $this->id,
-            'property_type' => "raktar",
-            'subtype' => $this->subtype,
+            'type' => $type,
+            'subtype' => $subtype,
             'ar' => $this->ar,
-            'alapterulet' => $this->alapterulet,
-            'allapot' => $this->allapot,
+            'terulet' => $this->alapterulet,
+            'allapot' => GetAllapotIdByDesc($this->allapot),
             'telekterulet' => $this->telekterulet
         );
         return $data;
-    }
-
-    private function GetAllopotDescById($allapot){
-        $result = (select( "SELECT property_condition_desc FROM property_conditions WHERE property_condition_code = '".$allapot."';",true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetAllapotIdByDesc($allapot){
-        $result = (select( "SELECT property_condition_code FROM property_conditions WHERE property_condition_desc = '".$allapot."';",true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetTypeId()
-    {
-        $result = (select( "SELECT property_type_code FROM property_types WHERE property_type_desc = 'GARAZS';", true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetSubtypeId()
-    {
-        $result = (select( "SELECT property_sub_type_code FROM property_sub_types WHERE property_sub_type_desc = '".$this->subtype."';", true, null));
-        foreach ($result as $r){
-            return $r;
-        }
-    }
-
-    private function GetSubtypeById($subtype_id)
-    {
-        $result = (select( "SELECT property_sub_type_desc FROM property_sub_types WHERE property_sub_type_code = '".$subtype_id."';", true, null));
-        foreach ($result as $r){
-            return $r;
-        }
     }
 }
