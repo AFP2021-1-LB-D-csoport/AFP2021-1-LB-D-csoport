@@ -5,7 +5,7 @@
 <?php
 
   if (isset($_SESSION['user'])){
-    if ($_SESSION['user']['realtor_id'] !== NULL) {
+    if (!empty($_SESSION['user']['realtor_id'])) {
       $menu[] = ['href' => '?p=admin', 'title' => 'Admin felület'];
       $menu[] = ['href' => '?p=users&m=settings', 'title' => $_SESSION['user']['first_name']];
     } else {
