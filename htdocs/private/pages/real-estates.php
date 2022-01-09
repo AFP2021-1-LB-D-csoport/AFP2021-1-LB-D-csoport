@@ -3,17 +3,21 @@
 require_once './private/utils/db_manager.php';
 
 function my_ads(){
-    $id = $_SESSION['user']['profile_id'];
-    $query = "SELECT * 
-        FROM PROPERTY_DESCRIPTION PRODES 
-        JOIN PROPERTY PROPER ON PROPER.property_id = PRODES.property_id 
-        JOIN PROPERTY_LOCATION PROLOC ON PROLOC.property_id = PROPER.property_id 
-        JOIN PROPERTY_TYPE PROTYP ON PROTYP.property_type_id = PROPER.property_type_id 
-        JOIN PROPERTY_TYPES PROTYS ON PROTYS.property_type_code = PRODES.property_type 
-        JOIN PROPERTY_X_PROFILE PROXPRO ON PROXPRO.property_id = PRODES.property_id
-        WHERE PROXPRO.profile_id = " .$id. "";
-    $result = select($query);
-    require_once REAL_ESTATES_DIR.'list.php';
+    if (isset($_SESSION['user']['profile_id'])) {
+        $id = $_SESSION['user']['profile_id'];
+        $query = "SELECT * 
+            FROM PROPERTY_DESCRIPTION PRODES 
+            JOIN PROPERTY PROPER ON PROPER.property_id = PRODES.property_id 
+            JOIN PROPERTY_LOCATION PROLOC ON PROLOC.property_id = PROPER.property_id 
+            JOIN PROPERTY_TYPE PROTYP ON PROTYP.property_type_id = PROPER.property_type_id 
+            JOIN PROPERTY_TYPES PROTYS ON PROTYS.property_type_code = PRODES.property_type 
+            JOIN PROPERTY_X_PROFILE PROXPRO ON PROXPRO.property_id = PRODES.property_id
+            WHERE PROXPRO.profile_id = " .$id. "";
+        $result = select($query);
+        require_once REAL_ESTATES_DIR.'list.php';
+    } else {
+        echo 'Nincsenek hirdetéseid.';
+    }
 }
 
 function enlist(){

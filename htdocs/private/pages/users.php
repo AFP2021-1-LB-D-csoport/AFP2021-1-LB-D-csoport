@@ -49,8 +49,9 @@ function registration(){
     if (!filter_has_var(INPUT_POST, 'submit')){
         require USERS_DIR.'registration.php';
     } else {
-        $id = select('SELECT MAX(profile_id) FROM profile');
-        $id = $id + 1;
+        $select = select('SELECT MAX(profile_id) FROM profile');
+        $max_id = $select[0]["MAX(profile_id)"];
+        $id = str_pad(($max_id + 1), 4, '0', STR_PAD_LEFT);
         $username = filter_input(INPUT_POST, 'username');
         $email = filter_input(INPUT_POST, 'email');
         $date = '2021-12-19';
