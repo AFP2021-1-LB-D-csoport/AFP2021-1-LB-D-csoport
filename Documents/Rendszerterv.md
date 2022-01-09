@@ -160,7 +160,14 @@ A projekt során létrehozandó adatbázisnak szükséges tárolnia az ingatlank
 ![domain model v2](https://user-images.githubusercontent.com/85219194/140760457-70fbff6b-8f4e-492f-9a9c-6013ec4ac46b.JPG)
 
 
+
 ### 8. Architekturális terv
+
+A rendszer működéséhez szükség van egy adatbázis szerverre. Erre a célra egy MySql adatbázis lett létrehozva. A weboldal és az adatbázis közötti kommunikáció PDO segítségével történik.
+
+A rendszer könnyen bővíthető a felhasználók, adminok általi hirdetésfeladással, valamint a működés tekintetében is könnyen lehet fejleszteni. 
+
+A rendszer biztonsági funkciójaihoz tartozik az, hogy a weboldal rendelkezik adminisztrációs fiókkal. Az admin fiókból lehetséges kezelni a felhasználók hirdetéseit.
 
 
 
